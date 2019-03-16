@@ -1,0 +1,88 @@
+form {
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    background-color: $accentColor;
+    padding: 2rem;
+    box-shadow: -8px 8px 0px 2px $colorLight;
+
+    button {
+             background-color:transparent;
+             border: 2px solid darken(rgba($accentColor, .5), 20%);
+             transition: .09s all linear;
+             margin-top:1rem;
+             color:#436558;
+             padding:10px;
+
+
+             &:hover,
+             &:focus {
+                border: 2px solid darken(rgba($accentColor, 1), 20%);
+                background-color:lighten(rgba($accentColor, 1), 5%);
+             }
+    }
+}
+
+.nameContainer {
+    @include flex (row, space-between, center);
+
+    input {
+        width: 90%;
+        color:$primaryColor;
+    }
+
+    #lastName {
+        margin-left: 10%;
+    }
+}
+
+.js-float-label-wrapper {
+    position: relative;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    width:100%;
+    margin:0 auto;
+
+    input {
+        background-color:transparent;
+        border:none;
+        border-bottom: 2px solid darken(rgba($accentColor,.5), 20%);
+        transition: .09s all linear;
+
+        &:focus {
+
+            border-bottom: 2px solid darken(rgba($accentColor, 1), 25%);
+        }
+
+        // &::placeholder {
+
+        //     color:$secondaryColor;
+        // }
+    }
+
+
+
+    input:placeholder-shown + label {
+        opacity:0;
+        visibility:hidden;
+        transform: translateY(-1px);
+    }
+
+    label {
+        transition: .1s all linear;
+        font-size: 0.8rem;
+    }
+}
+
+textarea{
+    background-color:transparent;
+    border: 2px solid darken(rgba($accentColor, .5), 20%);
+    transition: .09s all linear;
+    
+    &:focus {
+        background-color:lighten(rgba($accentColor,1), 5%);
+          border: 2px solid darken(rgba($accentColor, 1), 20%);
+     }
+}
+

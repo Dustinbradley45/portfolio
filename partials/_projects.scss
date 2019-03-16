@@ -1,0 +1,132 @@
+.projectsContainer {
+    height:100vh;
+    width:100%;
+    overflow:hidden;
+    background-color:$secondaryColor;
+   
+  
+
+     h2 {
+         color: $colorLight;
+
+         &:after {
+             content: " ";
+             background-color: white;
+             height: 2px;
+             display: block;
+             margin-top: 7px;
+             width: 400px;
+             opacity: 0.5;
+         }
+     }
+}
+
+.rightProjectContainer {
+
+
+}
+
+.innerProjectContainer {
+    height: 80%;
+    @include flex(row, flex-start, center);
+}
+.bottomProjectContainer {
+    height: 20%;
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    margin:0 auto;
+
+
+    .scrollDown {
+       transform: 
+        translateY(84px) 
+        rotate(45deg);
+    }
+
+}
+
+.leftProjectContainer {
+    width:50%;
+
+    p {
+        color:$colorLight;
+    }
+}
+
+.rightProjectContainer {
+    @include flex(column, flex-start, center);
+    width: 70%;
+    height: 100%;
+}
+
+.projectContainer {
+    width: 100%;
+    height:100%;
+    @include flex(column, center, center);
+    text-align:center;
+   
+}
+
+.responsiveIcons {
+    height: 10%;
+    @include flex(row, center, center);
+    font-size: 2rem;
+    
+    button {
+        color: rgba($colorLight,0.6);
+        border: none;
+        background-color:transparent;
+        margin: 1rem;
+
+
+        &:hover,
+        &:focus {
+
+            color:$accentColor;
+        }
+    }
+
+}
+
+.mainProjectSpace {
+    height: 70%;
+    width: 60%;
+    overflow:scroll;
+
+    img{
+        width:100%;
+    }
+}
+
+// .projectContainerOne
+//  {
+//     @include flex(column, center, center);
+//     width: 100%;
+//     height: 100%;
+// }
+// .projectContainerTwo,
+// .projectContainerThree {
+//     display:none;
+// }
+
+.changeProjectButtons {
+    @include flex(row, center, center);
+    width: 100%;
+    height:20%;
+
+    button {
+        margin: 10px;
+        padding: 10px;
+        border: 2px solid rgba($colorLight, .5);
+        background: transparent;
+        color:$colorLight;
+    }
+}
+
+.activeProject {
+    color: $accentColor;
+    background-color: $accentColor;
+}

@@ -1,0 +1,52 @@
+.contactContainer {
+    height:100vh;
+    width:100%;
+    background-color:$primaryColor;
+
+    
+        h2 {
+            color: $colorLight;
+
+            &:after {
+                content: " ";
+                background-color: white;
+                height: 1px;
+                display: block;
+                margin-top: 7px;
+                width: 400px;
+                opacity: 0.5;
+            }
+        } 
+}
+.mainContactContainer {
+    @include flex(row, flex-start, center);
+    height: 100%;
+
+}
+.contactLeftContainer {
+    width: 40%;
+}
+
+.contactRightContainer {
+    width: 60%;
+}
+
+.socialMediaIconContainer {
+    padding-top:1rem;
+
+    i {
+        font-size:2rem;
+        color:$colorLight;
+        padding:10px;
+        transition:.1 all linear;
+
+        &:hover,
+        &:focus {
+            color:$accentColor;
+        }
+    }
+}
+
+
+
+// FORM STYLES IN FORM PARTIALS

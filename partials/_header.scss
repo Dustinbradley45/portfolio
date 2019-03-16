@@ -1,0 +1,225 @@
+// HEADER MAIN STYLES WITH NAV
+header {
+    height:100vh;
+    background-color:$secondaryColor;
+
+    .mainHeaderNav {
+        height: 18vh;
+        @include flex(row, space-between, center);
+    }
+
+    .mainHeaderTitle {
+        height: 65vh;
+        position:relative;
+        @include flex(row, flex-start, center);
+        // transform:translateY(3rem);
+    }
+}
+
+
+
+
+.headerLogo {
+    width: 15%;
+
+    svg {    
+        fill:$colorLight;
+        transform:translate(-3.5rem);
+    }
+}
+
+.mainNav {
+    width: 4rem;
+    height: 4rem;
+    @include flex(column, center, center);
+
+
+    .hamburgerNav {
+        height: 3px;
+        width: 2rem;
+        background-color:$accentColor;
+        transition:0.09s all linear;
+        
+
+        &:after,
+        &:before {
+            content:'';
+            height: 3px;
+            background-color:$colorLight;
+            display:block;
+            transition:0.09s all linear;
+
+           
+        }
+        &:after {
+            transform:translateY(5px);
+            width: 70%;
+
+        }
+        &:before {
+            transform:translateY(-8px); 
+            width: 80%;
+        }
+
+        &:hover {
+            width: 2.5rem;
+        }
+    } 
+}
+
+.mainNav:hover .hamburgerNav:before,
+.mainNav:hover .hamburgerNav,
+.mainNav:hover .hamburgerNav:after {
+    width: 2.5rem;
+}
+
+.mainNav:hover .hamburgerNav:before {
+    transform:translateY(-13px);
+}
+
+.mainNav:hover .hamburgerNav:after {
+    transform:translateY(calc(7px + 3px))
+}
+
+.mainNav:active .hamburgerNav {
+    opacity:0;
+}
+
+
+
+
+
+.leftTitle {
+    width: 70%;
+    @include flex(column, center, flex-start);
+    height:100%;
+
+    h1 {
+        color:$colorLight;
+        @include font($secondaryFont, 600);
+        padding-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 4rem;
+         text-shadow: 3px 3px 0px $accentColor;
+        
+        .addAccent {
+            text-shadow: 3px 3px 0px $colorLight;
+
+        }
+
+        .underline {
+            border-bottom:1px solid white;
+            
+            // &:after {
+            //     content:"";
+            //     width: 20px;
+            //     height:3px;
+            //     background-color:$colorLight;
+            //     display:block;
+            // }
+        }
+
+       
+        &:after {
+            content: " ";
+            background-color:white;
+            height: 1px;
+            display:block;
+            margin-top:7px;
+            width:110%;
+            opacity: 0.5;
+        }
+    }
+
+    h3 {
+        font-family:$accentFont;
+        color:$colorLight;
+    }
+
+    p {
+        color:$colorLight;
+    }
+
+    button {
+        background-color:$colorLight;
+        border:none;
+        border-radius: 100%;
+        padding:8px;
+        width: 45px;
+        height: 45px;
+        margin-right:10px;
+        color:$accentColor;
+        transition: .05s all linear;
+        text-align:center;
+
+
+        &:hover {
+            background-color:$accentColor;
+            color: $colorLight;
+        }
+    }
+
+
+
+    .leftTitleNav {
+        @include flex(row,flex-start,center);
+
+    }
+}
+
+.bottomHeaderContainer {
+    width:100%;
+    height: 17vh;
+    @include flex(column, flex-end, flex-end);
+    overflow:hidden;
+    color:$colorLight;
+
+    
+    button {
+        background-color:transparent;
+        color:$colorLight;
+        height: 4rem;
+        border-radius:12px;
+        border: 2px solid rgba($colorLight, .2);
+        padding: .8rem;
+        transition: .09s all linear;
+        // margin-bottom:1rem;
+        
+        &:hover,
+        &:focus {
+            border: 2px solid rgba($colorLight, 1);
+        }
+    }
+
+    .scrollDown {
+        order:2;
+
+        i {
+            // padding-right:6px;
+        }
+    }
+
+}
+    
+
+
+// ANIMATIONS
+
+@keyframes chevronJiggle {
+    0% {
+        transform:rotate(-44deg) translateY(-20px) ;
+    }
+    25% {
+        transform:rotate(-44deg) translateY(-22px)
+    }
+    50% {
+        transform:rotate(-44deg) translateY(-20px)
+    }
+    75% {
+        transform:rotate(-44deg) translateY(-18px) scale(1.03)
+    }
+    100% {
+        transform:rotate(-44deg) translateY(-20px) 
+    }
+}

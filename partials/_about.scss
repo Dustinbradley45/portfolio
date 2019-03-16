@@ -1,0 +1,86 @@
+.aboutContainer {
+    height: 100vh;
+    color:$colorLight;
+    @include flex(row,flex-start,center);
+    flex-wrap:wrap;
+    overflow:hidden;
+    // transform:translateY(4rem);
+}
+
+.aboutRightInfo {
+    width: 70%;
+    text-align:right;
+    height: 80%;
+    @include flex(column, center,flex-end);
+
+    h2 {
+    
+        &:after {
+            content: " ";
+            background-color: white;
+            height: 1px;
+            display: block;
+            margin-top: 7px;
+            width: 400px;
+            opacity: 0.5;
+        }
+    }
+
+    p {
+        width: 80%;
+    }
+   
+}
+
+.aboutInfoNav {
+    @include flex(row, flex-start,center);
+
+     button {
+         background-color: $colorLight;
+         border: none;
+         border-radius: 100%;
+         padding: 8px;
+         width: 45px;
+         height: 45px;
+         margin-left: 10px;
+         color: $accentColor;
+         transition: .05s all linear;
+         text-align: center;
+         
+
+
+         &:hover {
+             background-color: $accentColor;
+             color: $colorLight;
+         }
+     }
+}
+
+.aboutLeftContainer {
+    width: 30%;
+    height: 80%;
+    @include flex(row, center,center);
+
+    .headshotContainer {
+        width: 100%;
+        margin:0 auto;
+
+        img {
+            width: 100%;
+            box-shadow: 8px 8px 0px 1px rgba(101, 173, 145, 1);
+           
+        }
+    }
+
+}
+
+.back {
+    background-color:red;
+}
+
+.bottomAboutContainer {
+    margin:0 auto;
+    height: 20%;
+    @include flex(column, flex-end, center);
+}
+
