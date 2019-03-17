@@ -1,0 +1,42 @@
+.headerNav {
+    // position:absolute;
+    color:white;
+    top:0;
+    right:0;
+    // left:0;
+    // background-color: $accentColor;
+    margin:0 auto;
+    text-align:center;
+    // height: 100vh;
+    opacity:0;
+    margin-top: 2rem;
+    position:fixed;
+    
+
+
+    ul {
+        list-style:none;
+        
+            li {
+                // display:none;
+                border: 1px solid $accentColor;
+                padding: 20px 0;
+                margin: 20px 0;
+            }
+
+    }
+
+
+}
+
+
+@keyframes navMenuFadeIn {
+    from {
+        right: 50px;
+    }
+
+    to {
+        right: 0;
+    
+    }
+}

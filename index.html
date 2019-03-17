@@ -11,7 +11,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <!-- FLOW LABELS -->
-    <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
 
 
     <!-- FONT AWESOME -->
@@ -23,6 +22,18 @@
 
 
 <body>
+    <div class="headerNav">
+        <nav>
+            <button class="close">Close</button>
+            <ul>
+                <li id="headerNavMenuItem">Home</li>
+                <li id="headerNavMenuItem">About</li>
+                <li id="headerNavMenuItem">Skills</li>
+                <li id="headerNavMenuItem">Projects</li>
+                <li id="headerNavMenuItem">Contact</li>
+            </ul>
+        </nav>
+    </div>
     <header>
         <!-- CONTAINS NAV AND LOGO. HEIGHT 18VH -->
         <div class="wrapper">
@@ -82,7 +93,7 @@
                         <p>About</p>
                     </div>
                 </div>
-                <div class="rightTitle">
+                <!-- <div class="rightTitle">
                     <div class="pageLines lineOne" aria-label="Home"></div>
                     <div class="pageLines lineTwo" aria-label="About"></div>
                     <div class="pageLines lineThree" aria-label="Education"></div>
@@ -90,7 +101,7 @@
                     <div class="pageLines lineFive" aria-label="Contact"></div>
 
                 <!-- PAGE LINES -->
-                </div>
+                </div> -->
             </section>
             <!-- HEADER FOOTER -->
             <section class="headerFooter">
@@ -99,11 +110,12 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <button class="contactHeader">
-                        <a href="#contactPage">Contact Form</a>
+                        <a href="#contactPage">Contact</a>
                     </button>
                 </div>
             </section>
         </div>
+        
 
             <!-- MAIN START -->
             <main>
@@ -151,6 +163,7 @@
                             <!-- HACKER YOU LOGO -->
                             <p>HackerYou Web Development Immersive</p>
                         </div>  
+                       
                         <div class="educationRightIconGallery"
                         data-aos="fade-left"
                         data-aos-offset="300"
@@ -235,22 +248,40 @@
 
                 <!-- PROJECT CONTAINER -->
                 <section class="projectsContainer" id="project">
-                    <div class="innerProjectContainer wrapper">
-                        <div class="leftProjectContainer">
-                        <h2>My <span class="addAccent">Projects.</span></h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, voluptas. Labore, consequatur nisi totam quis, animi iusto accusamus ipsa rem esse nam est reiciendis cumque pariatur obcaecati at? Asperiores, temporibus!</p>
-                        </div>
-                        <div class="rightProjectContainer">
+                    <div class="innerProjectScrollContainer wrapper">
+                        <!-- <div class="title"> -->
+                            <!-- <h2>This is my Title</h2> -->
+                            <!-- <div class="responsiveIcons">
+                                <button class="desktop  responsive" data-val="1"><i class="fas fa-desktop"></i></button>
+                                <button class="tablet responsive" data-val="2"><i class="fas fa-tablet-alt"></i></button>
+                                <button class="mobile responsive" data-val="3"><i class="fas fa-mobile-alt"></i></button>
+                            </div> -->
+
+                        <!-- </div> -->
+                        <!-- <div class="scrollContainerOne">
                             <div class="responsiveIcons">
                                 <button class="desktop  responsive" data-val="1"><i class="fas fa-desktop"></i></button>
                                 <button class="tablet responsive" data-val="2"><i class="fas fa-tablet-alt"></i></button>
                                 <button class="mobile responsive" data-val="3"><i class="fas fa-mobile-alt"></i></button>
                             </div>
-                           <div class="mainProjectSpace">
 
-                           </div>
+                            <object data="https://dustinbradley45.github.io/dustinBradleyProject2/" type="text/html"></object>
+                        </div>
+                        <div class="sliderOneTitle" id="sliderTitle">
+                           <h2> Planted</h2>
+                        </div>
+                        <div class="scrollContainerTwo">
+                            <object data="https://dustinbradley45.github.io/brokenPhone/" type="text/html"></object>
+
+                        </div>
+                        <div class="scrollContainerThree">
+                            <object data="https://musiclist-c7483.firebaseapp.com/" type="text/html"></object>
+                        </div>
+                       
+
+                       -->
                            
-                                <div class="changeProjectButtons">
+                                <!-- <div class="changeProjectButtons">
                                     <button class="project1 projectChange" data-id="1">
                                         Project 1
                                     </button>
@@ -260,7 +291,7 @@
                                 <button class="project3 projectChange" data-id="3" >
                                         Project 3
                                 </button>
-                                </div>
+                                </div> -->
                             </div>  
                         </div>
                     <div class="bottomProjectContainer">
@@ -331,9 +362,26 @@
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
    
     <!-- FLOW LABELS -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script> -->
+    <script src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./scripts.js"></script>
    
 </body>
 </html>
+
+<!-- <div class="leftProjectContainer">
+                        <h2>My <span class="addAccent">Projects.</span></h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, voluptas. Labore, consequatur nisi totam quis, animi iusto accusamus ipsa rem esse nam est reiciendis cumque pariatur obcaecati at? Asperiores, temporibus!</p>
+                        </div>
+                        <div class="rightProjectContainer">
+                            <div class="responsiveIcons">
+                                <button class="desktop  responsive" data-val="1"><i class="fas fa-desktop"></i></button>
+                                <button class="tablet responsive" data-val="2"><i class="fas fa-tablet-alt"></i></button>
+                                <button class="mobile responsive" data-val="3"><i class="fas fa-mobile-alt"></i></button>
+                            </div>
+                           <div class="mainProjectSpace">
+
+                           </div>-->

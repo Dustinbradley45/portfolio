@@ -3,11 +3,12 @@
     width:100%;
     overflow:hidden;
     background-color:$secondaryColor;
+
    
   
-
      h2 {
          color: $colorLight;
+         justify-self:flex-start;
 
          &:after {
              content: " ";
@@ -21,14 +22,22 @@
      }
 }
 
-.rightProjectContainer {
-
-
+object {
+    width:100%;
+    height:80vh;
+    border-left: 1rem $accentColor solid;
+    border-right: 1rem $accentColor solid;
+    border-top:2.5rem $accentColor solid;
+    border-bottom: 2.5rem $accentColor solid;
+    border-radius: 10px;
 }
 
-.innerProjectContainer {
-    height: 80%;
+.innerProjectScrollContainer {
     @include flex(row, flex-start, center);
+     flex-wrap: nowrap;
+     overflow-x: auto;
+     position:relative;
+
 }
 .bottomProjectContainer {
     height: 20%;
@@ -46,6 +55,35 @@
         rotate(45deg);
     }
 
+}
+
+.sliderOneTitle{
+    // opacity: 0;
+    // transform: matrix(0.9, 0, 0, 0.9, 100, 0);
+    // transition: .3s all linear;
+    position: absolute;
+    color: white;
+    top: 35vh;
+    left: 0;
+
+
+}
+
+body {
+    outline: 4px solid tomato;
+}
+
+.mainNav {
+    outline: 2px solid green;
+}
+
+.headerNav {
+    outline : 4px solid blue;
+}
+
+.sliderOneTitle:hover span{
+      opacity: 1;
+      transform: matrixmatrix(1, 0, 0, 1, 0, 0)
 }
 
 .leftProjectContainer {
@@ -71,6 +109,10 @@
 }
 
 .responsiveIcons {
+    position:absolute;
+    left:0;
+    right: 0;
+    top: 60px;
     height: 10%;
     @include flex(row, center, center);
     font-size: 2rem;
@@ -91,14 +133,41 @@
 
 }
 
-.mainProjectSpace {
-    height: 70%;
-    width: 60%;
-    overflow:scroll;
+.innerProjectScrollContainer {
+    height: 100vh;
+    width: 100%;
+    // overflow:scroll;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
 
-    img{
-        width:100%;
+    object{
+        
     }
+}
+
+.innerProjectScrollContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollContainerOne,
+.scrollContainerTwo,
+.scrollContainerThree {
+width:95%;
+flex: 0 0 auto;
+
+}
+
+.scrollContainerOne {
+    margin: 5% 5% 5% 0;
+}
+
+.scrollContainerTwo {
+    margin: 5%;
+}
+
+.scrollContainerThree {
+    margin: 5% 0 5% 5%;
 }
 
 // .projectContainerOne

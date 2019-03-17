@@ -624,6 +624,45 @@ header .mainHeaderTitle {
   }
 }
 
+.headerNav {
+  color: white;
+  top: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  opacity: 0;
+  margin-top: 2rem;
+  position: fixed;
+}
+
+.headerNav ul {
+  list-style: none;
+}
+
+.headerNav ul li {
+  border: 1px solid #65ad91;
+  padding: 20px 0;
+  margin: 20px 0;
+}
+
+@-webkit-keyframes navMenuFadeIn {
+  from {
+    right: 50px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes navMenuFadeIn {
+  from {
+    right: 50px;
+  }
+  to {
+    right: 0;
+  }
+}
+
 .aboutContainer {
   height: 100vh;
   color: #fffdf6;
@@ -935,6 +974,7 @@ header .mainHeaderTitle {
 
 .projectsContainer h2 {
   color: #fffdf6;
+  justify-self: flex-start;
 }
 
 .projectsContainer h2:after {
@@ -947,8 +987,17 @@ header .mainHeaderTitle {
   opacity: 0.5;
 }
 
-.innerProjectContainer {
-  height: 80%;
+object {
+  width: 100%;
+  height: 80vh;
+  border-left: 1rem #65ad91 solid;
+  border-right: 1rem #65ad91 solid;
+  border-top: 2.5rem #65ad91 solid;
+  border-bottom: 2.5rem #65ad91 solid;
+  border-radius: 10px;
+}
+
+.innerProjectScrollContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -962,6 +1011,10 @@ header .mainHeaderTitle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
+  position: relative;
 }
 
 .bottomProjectContainer {
@@ -986,6 +1039,31 @@ header .mainHeaderTitle {
 .bottomProjectContainer .scrollDown {
   -webkit-transform: translateY(84px) rotate(45deg);
           transform: translateY(84px) rotate(45deg);
+}
+
+.sliderOneTitle {
+  position: absolute;
+  color: white;
+  top: 35vh;
+  left: 0;
+}
+
+body {
+  outline: 4px solid tomato;
+}
+
+.mainNav {
+  outline: 2px solid green;
+}
+
+.headerNav {
+  outline: 4px solid blue;
+}
+
+.sliderOneTitle:hover span {
+  opacity: 1;
+  -webkit-transform: matrixmatrix(1, 0, 0, 1, 0, 0);
+          transform: matrixmatrix(1, 0, 0, 1, 0, 0);
 }
 
 .leftProjectContainer {
@@ -1034,6 +1112,10 @@ header .mainHeaderTitle {
 }
 
 .responsiveIcons {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60px;
   height: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1062,14 +1144,40 @@ header .mainHeaderTitle {
   color: #65ad91;
 }
 
-.mainProjectSpace {
-  height: 70%;
-  width: 60%;
-  overflow: scroll;
+.innerProjectScrollContainer {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
-.mainProjectSpace img {
-  width: 100%;
+.innerProjectScrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollContainerOne,
+.scrollContainerTwo,
+.scrollContainerThree {
+  width: 95%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.scrollContainerOne {
+  margin: 5% 5% 5% 0;
+}
+
+.scrollContainerTwo {
+  margin: 5%;
+}
+
+.scrollContainerThree {
+  margin: 5% 0 5% 5%;
 }
 
 .changeProjectButtons {
