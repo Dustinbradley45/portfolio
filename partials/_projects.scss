@@ -37,6 +37,7 @@ object {
      flex-wrap: nowrap;
      overflow-x: auto;
      position:relative;
+     scroll-behavior:smooth;
 
 }
 .bottomProjectContainer {
@@ -69,22 +70,10 @@ object {
 
 }
 
-body {
-    outline: 4px solid tomato;
-}
 
-.mainNav {
-    outline: 2px solid green;
-}
 
-.headerNav {
-    outline : 4px solid blue;
-}
 
-.sliderOneTitle:hover span{
-      opacity: 1;
-      transform: matrixmatrix(1, 0, 0, 1, 0, 0)
-}
+    
 
 .leftProjectContainer {
     width:50%;
@@ -110,9 +99,8 @@ body {
 
 .responsiveIcons {
     position:absolute;
-    left:0;
-    right: 0;
-    top: 60px;
+    left: 40%;
+    top: -7px;
     height: 10%;
     @include flex(row, center, center);
     font-size: 2rem;
@@ -141,22 +129,108 @@ body {
       flex-wrap: nowrap;
       overflow-x: auto;
 
-    object{
-        
-    }
 }
 
 .innerProjectScrollContainer::-webkit-scrollbar {
     display: none;
 }
 
-.scrollContainerOne,
-.scrollContainerTwo,
-.scrollContainerThree {
+.scrollContainer {
+    margin-left: 5%;
+    position:relative;
+    @include flex(row, center, center);
+    
+}
+
+.scrollContainerMain,
+.scrollContainer
+{
 width:95%;
 flex: 0 0 auto;
 
 }
+
+.goBack
+{
+    background-color:transparent;
+    border:none;
+    color: $colorLight;
+    position:absolute;
+    left:-3rem;
+    transform:rotate(90deg);
+    font-size: 3rem;
+
+    svg {
+    transform:rotate(180deg);
+    fill: $accentColor;
+
+}}
+
+
+
+.scrollContainerMain {
+    @include flex(row, center, center);
+    height: 80%;
+
+}
+
+.projectOneInfo,
+.projectOneImage,
+.projectTwoInfo,
+.projectTwoImage,
+.projectThreeInfo,
+.projectThreeImage {
+    width: 50%;
+    color:white;
+    text-align:center;
+}
+
+.projectOneInfo,
+.projectTwoInfo,
+.projectThreeInfo{
+    padding: 5px;
+}
+
+
+.projectOneImage,
+.projectTwoImage,
+.projectThreeImage {
+
+    height: 200px;
+    overflow:hidden;
+
+    img {
+        width: 100%;
+        border-left: 0.5rem solid $accentColor;
+        border-right: 0.5rem solid $accentColor;
+        border-bottom: 1.5rem solid $accentColor;
+        border-top:1.5rem solid $accentColor; 
+    }
+}
+
+.projectOneWrapper,
+.projectThreeWrapper {
+    @include flex(row, center,center);
+}
+.projectTwoWrapper {
+    @include flex(row-reverse, center,center);
+    margin-top: 1rem;
+}
+
+
+.scrollContainerLeft {
+    width: 50%;
+    height: 100%;
+    @include flex(column, center, flex-start);
+
+}
+
+.scrollContainerRight {
+    width: 50%;
+    height: 100%;
+    @include flex(column, space-evenly, center);
+}
+
 
 .scrollContainerOne {
     margin: 5% 5% 5% 0;
@@ -170,16 +244,7 @@ flex: 0 0 auto;
     margin: 5% 0 5% 5%;
 }
 
-// .projectContainerOne
-//  {
-//     @include flex(column, center, center);
-//     width: 100%;
-//     height: 100%;
-// }
-// .projectContainerTwo,
-// .projectContainerThree {
-//     display:none;
-// }
+
 
 .changeProjectButtons {
     @include flex(row, center, center);

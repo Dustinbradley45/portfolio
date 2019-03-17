@@ -7,17 +7,7 @@ $(function () {
     myPortfolio.init();
 })
 
-$(".desktop").on("click", () => {
-    $("object").animate({"width": "100%"})
-})
 
-$(".tablet").on('click', () => {
-    $("object").animate({ "width": "50%" });
-})
-
-$(".mobile").on("click", () => {
-    $("object").animate({ "width": "30%" });
-})
         
 
     myPortfolio.projectInfo = [{
@@ -180,17 +170,83 @@ myPortfolio.init = () => {
    
     
     //  CHANGE PROJECT
-    // $(".projectChange").on("click", function () {
-    //     if ($(this).data('id') === 1) {
-    //         myPortfolio.appendProjectOne();
-    //     } else if ($(this).data('id') === 2) {
-    //         myPortfolio.appendProjectTwo();
-    //     } else if ($(this).data('id') === 3) {
-    //         myPortfolio.appendProjectThree();
-    //     }
-    // })
-        
+    $(".projectChange").on("click", function () {
+        if ($(this).data('id') === 1) {
+            $(".scrollContainer").html(`
+             <button class="goBack"><i class="fas fa-chevron-down"></i></button>
+             <div class="responsiveIcons">
+                <button class="desktop  responsive" data-val="1"><i class="fas fa-desktop"></i></button>
+                <button class="tablet responsive" data-val="2"><i class="fas fa-tablet-alt"></i></button>
+                <button class="mobile responsive" data-val="3"><i class="fas fa-mobile-alt"></i></button>
+            </div>         
+            <object data="https://dustinbradley45.github.io/dustinBradleyProject2/" type="text/html"></object>
+            `);
+
+            $(".scrollContainer").animate({ "width": "95%" })
+
+            const screenWidth = $(window).width();
+            $(".innerProjectScrollContainer").scrollLeft(screenWidth);
+
+
+        } else if ($(this).data('id') === 2) {
+            $(".scrollContainer").html(`
+           
+            <button class="goBack"><i class="fas fa-chevron-down"></i></button>
+            <object data="https://dustinbradley45.github.io/brokenPhone/" type="text/html"></object>
+             <div class="responsiveIcons">
+                <button class="desktop  responsive" data-val="1"><i class="fas fa-desktop"></i></button>
+                <button class="tablet responsive" data-val="2"><i class="fas fa-tablet-alt"></i></button>
+                <button class="mobile responsive" data-val="3"><i class="fas fa-mobile-alt"></i></button>
+            </div>     `);
+
+            const screenWidth = $(window).width();
+            $(".innerProjectScrollContainer").scrollLeft(screenWidth);
+
+
+        } else if ($(this).data('id') === 3) {
+            $(".scrollContainer").html(`
+            <button class="goBack"><i class="fas fa-chevron-down"></i></button>
+            <object data="https://musiclist-c7483.firebaseapp.com/" type="text/html"></object>
+             <div class="responsiveIcons">
+                <button class="desktop  responsive" data-val="1"><i class="fas fa-desktop"></i></button>
+                <button class="tablet responsive" data-val="2"><i class="fas fa-tablet-alt"></i></button>
+                <button class="mobile responsive" data-val="3"><i class="fas fa-mobile-alt"></i></button>
+            </div>     `);
+
+            const screenWidth = $(window).width();
+            $(".innerProjectScrollContainer").scrollLeft(screenWidth);
+
+        }
+    })
+
+    $(".scrollContainer").on("click", ".desktop", () => {
+        console.log("I am registering")
+        $("object").delay(225).animate({ "width": "100%" });
+        $(".goBack").animate({ "left": "-3rem" })
+    })
+
+    $(".scrollContainer").on('click', ".tablet", () => {
+        $("object").animate({ "width": "50%" });
+        $(".goBack").delay(225).animate({"left" : "20%"})
+    })
+
+    $(".scrollContainer").on("click", ".mobile", () => {
+        $("object").animate({ "width": "30%" });
+        $(".goBack").delay(225).animate({ "left": "30%" })
+    })
+
+
+    const newScreenWidth = $(window).width();
+    $(".scrollContainer").on("click", ".goBack", () => {
+        console.log("hello world")
+        $(".innerProjectScrollContainer").scrollLeft(-newScreenWidth);
+        $(".goBack").animate({
+            "opacity": '0'
+        })
+
+    }
 
         
+    )
 }
 
