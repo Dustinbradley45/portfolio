@@ -628,12 +628,13 @@ header .mainHeaderTitle {
   color: white;
   top: 0;
   right: 0;
+  border-left: 1px solid #65ad91;
   background-color: #272727;
   margin: 0 auto;
   text-align: center;
   height: 100vh;
   opacity: 0;
-  padding-top: 2rem;
+  padding-top: 8vh;
   position: fixed;
 }
 
@@ -641,10 +642,136 @@ header .mainHeaderTitle {
   list-style: none;
 }
 
-.headerNav ul li {
-  border: 1px solid #65ad91;
-  padding: 20px 0;
-  margin: 20px 20px;
+.homeLink,
+.aboutLink,
+.skillsLink,
+.projectsLink,
+.contactLink {
+  padding: .5rem 0;
+  margin: 2rem 2rem;
+  position: relative;
+}
+
+.homeLink:before,
+.aboutLink:before,
+.skillsLink:before,
+.projectsLink:before,
+.contactLink:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 51%;
+  right: 51%;
+  background: #65ad91;
+  height: 10px;
+  width: 0%;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  z-index: -1;
+}
+
+.homeLink:hover::before, .homeLink:focus::before {
+  left: 85px;
+  right: 0;
+  top: 25px;
+  width: 35%;
+}
+
+.aboutLink:hover::before, .aboutLink:focus::before {
+  left: 85px;
+  right: 0;
+  top: 25px;
+  width: 35%;
+}
+
+.skillsLink:hover::before, .skillsLink:focus::before {
+  left: 85px;
+  right: 0;
+  top: 25px;
+  width: 35%;
+}
+
+.projectsLink:hover::before, .projectsLink:focus::before {
+  left: 85px;
+  right: 0;
+  top: 25px;
+  width: 35%;
+}
+
+.contactLink:hover::before, .contactLink:focus::before {
+  left: 85px;
+  right: 0;
+  top: 25px;
+  width: 35%;
+}
+
+.navBarButton {
+  width: 3rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.navBarButton:hover .navBar:after {
+  content: "Exit";
+  -webkit-transform: rotate(0deg) translateY(-20px);
+          transform: rotate(0deg) translateY(-20px);
+  background: transparent;
+  font-size: 1rem;
+  color: #fffdf6;
+}
+
+.navBarButton:hover .navBar:before {
+  -webkit-transform: rotate(0deg) translateY(3px);
+          transform: rotate(0deg) translateY(3px);
+  background-color: none;
+  height: 10px;
+  width: 1.5rem;
+}
+
+.navBar {
+  width: 0;
+  background-color: #65ad91;
+  -webkit-transform: translateX(-19px);
+          transform: translateX(-19px);
+}
+
+.navBar:before, .navBar:after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 3px;
+  background-color: #65ad91;
+}
+
+.navBar:after {
+  -webkit-transform: rotate(45deg) translateX(-1px);
+          transform: rotate(45deg) translateX(-1px);
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
+}
+
+.navBar:before {
+  -webkit-transform: rotate(-45deg) translateX(-1px);
+          transform: rotate(-45deg) translateX(-1px);
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
 }
 
 @-webkit-keyframes navMenuFadeIn {
@@ -1220,21 +1347,83 @@ object {
   padding: 5px;
 }
 
+.projectOneInfo p,
+.projectOneInfo a,
+.projectOneInfo button,
+.projectTwoInfo p,
+.projectTwoInfo a,
+.projectTwoInfo button,
+.projectThreeInfo p,
+.projectThreeInfo a,
+.projectThreeInfo button {
+  font-size: 1rem;
+}
+
+.projectOneInfo a,
+.projectOneInfo button,
+.projectTwoInfo a,
+.projectTwoInfo button,
+.projectThreeInfo a,
+.projectThreeInfo button {
+  border: 2px solid rgba(255, 253, 246, 0.6);
+  background-color: transparent;
+  border-radius: 8px;
+  color: #fffdf6;
+  padding: 5px;
+  margin: 3px;
+}
+
+.projectOneInfo a:hover,
+.projectOneInfo button:hover,
+.projectTwoInfo a:hover,
+.projectTwoInfo button:hover,
+.projectThreeInfo a:hover,
+.projectThreeInfo button:hover {
+  border: 2px solid #fffdf6;
+}
+
+.projectOneInfo h4,
+.projectTwoInfo h4,
+.projectThreeInfo h4 {
+  border-bottom: 2px solid #65ad91;
+}
+
+.projectOneInfo,
+.projectThreeInfo {
+  padding-right: 1rem;
+}
+
+.projectOneInfo h4,
+.projectThreeInfo h4 {
+  text-align: right;
+}
+
+.projectTwoInfo {
+  padding-left: 1rem;
+}
+
+.projectTwoInfo h4 {
+  text-align: left;
+}
+
 .projectOneImage,
 .projectTwoImage,
 .projectThreeImage {
+  border-radius: 10px;
   height: 200px;
   overflow: hidden;
+  border-left: 0.5rem solid #65ad91;
+  border-right: 0.5rem solid #65ad91;
+  border-bottom: 1.5rem solid #65ad91;
+  border-top: 1.5rem solid #65ad91;
 }
 
 .projectOneImage img,
 .projectTwoImage img,
 .projectThreeImage img {
   width: 100%;
-  border-left: 0.5rem solid #65ad91;
-  border-right: 0.5rem solid #65ad91;
-  border-bottom: 1.5rem solid #65ad91;
-  border-top: 1.5rem solid #65ad91;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .projectOneWrapper,
@@ -1268,7 +1457,7 @@ object {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 
 .scrollContainerLeft {

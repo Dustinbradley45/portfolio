@@ -189,22 +189,65 @@ flex: 0 0 auto;
 .projectTwoInfo,
 .projectThreeInfo{
     padding: 5px;
+
+    p,
+    a,
+    button {
+        font-size:1rem;
+    }
+
+    a,
+    button {
+        border: 2px solid rgba($colorLight, .6);
+        background-color:transparent;
+        border-radius: 8px;
+        color:$colorLight;
+        padding: 5px;
+        margin: 3px;
+
+        &:hover {
+              border: 2px solid rgba($colorLight, 1);
+        }
+    }
+
+    h4 {
+        border-bottom: 2px solid $accentColor;
+    }
+  
+}
+
+.projectOneInfo,
+.projectThreeInfo {
+    padding-right: 1rem;
+    h4 {
+       text-align: right;
+
+    }
+}
+
+.projectTwoInfo {
+    padding-left: 1rem;
+      h4 {
+          text-align:left;
+      }
 }
 
 
 .projectOneImage,
 .projectTwoImage,
 .projectThreeImage {
-
+    border-radius: 10px;
     height: 200px;
     overflow:hidden;
+    border-left: 0.5rem solid $accentColor;
+    border-right: 0.5rem solid $accentColor;
+    border-bottom: 1.5rem solid $accentColor;
+    border-top:1.5rem solid $accentColor; 
 
     img {
         width: 100%;
-        border-left: 0.5rem solid $accentColor;
-        border-right: 0.5rem solid $accentColor;
-        border-bottom: 1.5rem solid $accentColor;
-        border-top:1.5rem solid $accentColor; 
+        object-fit: cover;
+        
     }
 }
 
@@ -214,7 +257,7 @@ flex: 0 0 auto;
 }
 .projectTwoWrapper {
     @include flex(row-reverse, center,center);
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
 
 

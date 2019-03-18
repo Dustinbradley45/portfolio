@@ -23,14 +23,18 @@
 
 <body>
     <div class="headerNav">
+        <div class="navBarButton role="button" tabindex="0" aria-pressed="false" aria-label='Close Menu'>
+            <div class="navBar">
+    
+            </div>
+        </div>
         <nav>
-            <button class="close">Close</button>
             <ul>
-                <li id="headerNavMenuItem">Home</li>
-                <li id="headerNavMenuItem">About</li>
-                <li id="headerNavMenuItem">Skills</li>
-                <li id="headerNavMenuItem">Projects</li>
-                <li id="headerNavMenuItem">Contact</li>
+                <li id="headerNavMenuItem" class="homeLink">Home</li>
+                <li id="headerNavMenuItem" class="aboutLink">About</li>
+                <li id="headerNavMenuItem" class="skillsLink">Skills</li>
+                <li id="headerNavMenuItem" class="projectsLink">Projects</li>
+                <li id="headerNavMenuItem" class="contactLink">Contact</li>
             </ul>
         </nav>
     </div>
@@ -101,7 +105,7 @@
                     <div class="pageLines lineFive" aria-label="Contact"></div>
 
                 <!-- PAGE LINES -->
-                </div> -->
+                </div>
             </section>
             <!-- HEADER FOOTER -->
             <section class="headerFooter">
@@ -109,9 +113,9 @@
                     <button class="scrollDown">
                         <i class="fas fa-chevron-down"></i>
                     </button>
-                    <button class="contactHeader">
+                    <!-- <button class="contactHeader">
                         <a href="#contactPage">Contact</a>
-                    </button>
+                    </button> -->
                 </div>
             </section>
         </div>
@@ -256,7 +260,7 @@
                             <div class="scrollContainerRight">
                                 <div class="projectOneWrapper">
                                     <div class="projectOneInfo">
-                                        <h3>Planted</h3>
+                                        <h4>Planted</h4>
                                         <p>Three Page PSD</p>
                                         <button  class="project1 projectChange" data-id="1">Preview</button>
                                         <a href="#">GitHub</a>
@@ -269,7 +273,7 @@
 
                                 <div class="projectTwoWrapper">
                                     <div class="projectTwoInfo">
-                                        <h3>Broken Telephone</h3>
+                                        <h4>Broken Telephone</h4>
                                         <p>jQuery Game</p>
                                         <button class="project2 projectChange" data-id="2">Preview</button>
                                         <a href="#">GitHub</a>
@@ -282,7 +286,7 @@
 
                                 <div class="projectThreeWrapper">
                                     <div class="projectThreeInfo">
-                                        <h4>Playlist maker</h4>
+                                        <h4>Playlist Maker</h4>
                                         <p>React Playlist Builder</p>
                                         <button class="project3 projectChange" data-id="3">Preview</button>
                                         <a href="#">GitHub</a>

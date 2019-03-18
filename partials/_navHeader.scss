@@ -1,15 +1,15 @@
 .headerNav {
-    // position:absolute;
+
     color:white;
     top:0;
     right:0;
-    // left:0;
+    border-left: 1px solid $accentColor;
     background-color: $secondaryColor;
     margin:0 auto;
     text-align:center;
     height: 100vh;
     opacity:0;
-    padding-top: 2rem;
+    padding-top: 8vh;
     position:fixed;
     
 
@@ -17,16 +17,159 @@
     ul {
         list-style:none;
         
-            li {
-                // display:none;
-                border: 1px solid $accentColor;
-                padding: 20px 0;
-                margin: 20px 20px;
-            }
+          
+
 
     }
 
 
+}
+
+ .homeLink,
+ .aboutLink,
+ .skillsLink,
+ .projectsLink,
+ .contactLink {
+     // display:none;
+    //  border: 2px solid $accentColor;
+     padding: .5rem 0;
+     margin: 2rem 2rem;
+     position:relative;
+
+     &:before {
+         content: "";
+         display:block;
+         position:absolute;
+         left: 51%;
+         right: 51%;
+         background: $accentColor;
+         height: 10px;
+         width: 0%;
+         transition-property: left, right;
+         transition-duration: 0.3s;
+         transition-timing-function: ease-out;
+         z-index: -1;
+
+       
+     }
+
+     
+    }
+    
+
+
+.homeLink {
+
+    &:hover::before,
+     &:focus::before
+     {
+        left: 85px;
+        right: 0;
+        top: 25px;
+        width: 35%;
+
+    }
+}
+
+.aboutLink {
+    &:hover::before,
+     &:focus::before
+
+     {
+        left: 85px;
+        right: 0;
+        top: 25px;
+        width: 35%;
+}
+}
+
+.skillsLink {
+    &:hover::before,
+     &:focus::before
+     {
+        left: 85px;
+        right: 0;
+        top: 25px;
+        width: 35%;
+    }
+}
+
+.projectsLink {
+    &:hover::before,
+     &:focus::before
+     {
+        left: 85px;
+        right: 0;
+        top: 25px;
+        width: 35%;
+    }
+}
+
+.contactLink {
+    &:hover::before,
+    &:focus::before
+     {
+        left: 85px;
+        right: 0;
+        top: 25px;
+        width: 35%;
+    }
+}
+
+
+.navBarButton {
+    width: 3rem;
+    height: 3rem;
+ 
+    @include flex(column, center, center);
+    margin: 0 auto;
+}
+
+.navBarButton:hover .navBar:after {
+    content:"Exit";
+    transform: rotate(0deg) translateY(-20px);
+    background:transparent;
+    font-size: 1rem;
+    color: $colorLight;
+
+}
+
+.navBarButton:hover .navBar:before {
+    transform: rotate(0deg) translateY(3px);
+    background-color:none;
+    height: 10px;
+    width: 1.5rem;
+}
+
+.navBar{
+// width: 1rem;
+// height: 2px;
+width: 0;
+background-color: $accentColor;
+transform: translateX(-19px);
+
+
+    &:before,
+    &:after {
+        content: "";
+        display:block;
+        width: 2.5rem;
+        height: 3px;
+        background-color: $accentColor;
+       
+
+    }
+
+    &:after {
+        // margin-top: 10px;
+        transform: rotate(45deg) translateX(-1px);
+        transition: .1s all linear;
+    }
+    &:before {
+        // margin-bottom: 10px;
+        transform: rotate(-45deg) translateX(-1px);
+             transition: .1s all linear;
+    }
 }
 
 

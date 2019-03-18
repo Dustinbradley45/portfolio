@@ -130,6 +130,7 @@ myPortfolio.init = () => {
     //     offset: 50
     // }).addTo(controller);
 
+  
     myPortfolio.openNav = () => {
         $(".headerNav").animate({
             "width": "250px",
@@ -144,6 +145,26 @@ myPortfolio.init = () => {
         
     }
 
+    myPortfolio.openNavMobile = () => {
+        $(".headerNav").animate({
+            "width": "100vw",
+            "opacity": "1",
+            "background-color": "#1d1d1d",
+            "z-index": "200",
+
+        })
+        $(".mainNav").animate({
+            "opacity": "0"
+        })
+        $("body").animate({
+            "margin-right": "100vh",
+           
+        })
+        $("header").animate({
+            "opacity" : "0"
+        })
+    }
+
     myPortfolio.closeNav = () => {
         $(".headerNav").animate({
             "width": "0",
@@ -153,16 +174,26 @@ myPortfolio.init = () => {
             "opacity": "1"
         })
         $("body").animate({
-            "marginRight": "0"
+            "margin-right": "0"
+        })
+
+        $("header").animate({
+            "opacity": "1"
         })
     }
 
     $(".mainNav").on("click", () => {
-        myPortfolio.openNav();
-        // myPortfolio.closeNav();
+        if ($(window).width() > 600) {
+            myPortfolio.openNav();
+
+        } else {
+            myPortfolio.openNavMobile();
+
+        }
+
     });
 
-    $(".close").on("click", () => {
+    $(".navBarButton").on("click", () => {
         myPortfolio.closeNav();
     })
     
