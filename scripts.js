@@ -104,25 +104,6 @@ myPortfolio.init = () => {
     myPortfolio.changeLine()
 
     // SCROLL FEATURE
-    // $('.scrollDown').on("click", function () {
-    //     const y = $(window).height();
-    //     window.scrollBy({
-    //         top: y,
-    //         behavior: 'smooth'
-    //     });
-
-    //     $(this).animate({
-    //         "opacity": 0
-    //     });
-    // });
-
-    // $(".bottomHeaderContainer").on("click", function () {
-    //     const y = $(window).height();
-    //     window.scrollBy({
-    //         top: y,
-    //         behaviour: 'smooth',
-    //     })
-    // })
 
     $('a[href^="#"]').on('click', function (event) {
         var target = $(this.getAttribute('href'));
@@ -133,6 +114,23 @@ myPortfolio.init = () => {
             }, 1000);
         }
     });
+
+    $(window).resize(() => {
+        if ($(window).width() < 700) {
+            console.log($(window).width)
+            console.log('hello world');
+            $(".buttonContainer").html(
+                ` <div class="mainProjectLinks">
+                    <a href="#">GitHub</a>
+                    <a href="#">Live</a>
+                </div>`
+            )
+            
+        } else $(".buttonContainer").html(
+            ` <button class="project1 projectChange" data-id="1">Preview</button>`
+        )
+
+    })
 
     // let controller = new ScrollMagic.Controller({
     //     container: '.scrollContainer',
@@ -228,7 +226,7 @@ myPortfolio.init = () => {
    
     
     //  CHANGE PROJECT
-    $(".projectChange").on("click", function () {
+    $(".buttonContainer").on("click", ".projectChange", function () {
         if ($(this).data('id') === 1) {
             $(".scrollContainer").html(`
              <button class="goBack"><i class="fas fa-chevron-down"></i></button>
