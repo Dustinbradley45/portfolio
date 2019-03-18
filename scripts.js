@@ -136,6 +136,9 @@ myPortfolio.init = () => {
             "width": "250px",
             "opacity": "1"
         })
+        $(".headerNav").css({
+            "display": "block"
+        })
         $(".mainNav").animate({
             "opacity": "0"
         })
@@ -153,6 +156,10 @@ myPortfolio.init = () => {
             "z-index": "200",
 
         })
+
+        $(".headerNav").css({
+            "display": "block"
+        })
         $(".mainNav").animate({
             "opacity": "0"
         })
@@ -168,7 +175,9 @@ myPortfolio.init = () => {
     myPortfolio.closeNav = () => {
         $(".headerNav").animate({
             "width": "0",
-            "opacity": "0",
+        })
+        $(".headerNav").css({
+            "display": "none"
         })
         $(".mainNav").animate({
             "opacity": "1"

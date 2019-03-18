@@ -1,0 +1,238 @@
+// $lgDesktop: "only screen and (max-width: 1600px)";
+// $medDesktop: "only screen and (max-width: 1440px)";
+// $smDesktop: "only screen and (max-width: 1280px)";
+// $lgTablet: "only screen and (max-width: 900px)";
+// $medTablet: "only screen and (max-width: 800px)";
+// $smTablet: "only screen and (max-width: 750px)";
+// $lgPhone: "only screen and (max-width: 650px)";
+// $medPhone: "only screen and (max-width: 550px)";
+// $smPhone: "only screen and (max-width: 400px)";
+
+// to declare : @media #{$smPhone} {
+    // blah
+// }
+
+//HEADER 
+
+@media #{$smDesktop} {
+    .headerContainer {
+        margin-left: 4rem;
+    }
+
+    .headerLogo{
+        width: 24%;
+        transform: translate(-6rem);
+        margin-left: 4rem;
+    }
+}
+
+@media #{$lgTablet} {
+
+    .headerlogo {
+        transform: translate(-1rem);
+        margin-left: 5.5rem;
+    }
+}
+
+@media #{$smTablet} {
+    .headerLogo {
+        width: 33%;
+        margin-left: 5rem;
+    }
+}
+
+@media #{$lgPhone} {
+    .headerLogo {
+        width: 46%;
+    }
+}
+
+@media #{$smPhone} {
+
+    header {
+        text-align:center;
+        
+        .mainHeaderNav {
+            @include flex(row, flex-end, center);
+        }
+    }
+
+
+    .headerLogo {
+        display:none;
+    }
+
+    .headerContainer {
+        margin-left: 1rem;
+    }
+
+    .leftTitle {
+        width: 90%;
+
+        .leftTitleNav {
+            align-self:center;
+
+            p {
+                display:none;
+            }
+        }
+    }
+
+    .leftTitle h1:after {
+        display:none;
+    }
+
+    .bottomHeaderContainer {
+
+        .scrollDown {
+            display:none;
+        }
+    }
+
+}
+
+// ABOUT SECTION
+
+
+@media #{$lgPhone} {
+
+    .aboutContainer {
+       justify-content:center;
+      padding: 4rem 0;
+        height: auto;
+        margin: 0 auto;
+
+    }
+    .aboutRightInfo {
+        width: 90%;
+         @include flex(column, center, center);
+           text-align:center;
+           margin: 0 auto;
+
+        h2 {
+            margin-top: 2rem;
+        }
+
+        h2::after {
+            display:none;
+        }
+    }
+
+    .aboutLeftContainer {
+        width: 90%;
+    }
+
+    .aboutInfoNav p{
+        display:none;
+    }
+
+    .scrollDown {
+        display:none;
+    }
+}
+
+// EDUCATION CONTAINER
+
+@media #{$smTablet} {
+
+    .educationContainer {
+        height: auto;
+        padding: 4rem 0;
+
+    }
+    .innerEducationContainer {
+        @include flex(column, center, center);
+    }
+
+    .educationLeftInfo {
+        width: 90%;
+        text-align:center;
+        
+        h2::after{
+            display:none;
+        }
+    }
+    .educationRightIconGallery {
+        width: 100%;
+    }
+
+    .iconContainer {
+        width: calc(50% - 20px);
+    }
+}
+
+// PROJECT 
+
+@media #{$smTablet} {
+    .projectsContainer {
+        height: auto;
+        padding: 4rem 0;
+        text-align:center;
+
+        h2 {
+            margin-bottom: 2rem;
+            &:after {
+                display:none;
+            }
+        }
+    }
+    .scrollContainerMain{
+        flex-direction: column;
+
+    }
+    .scrollContainerRight,
+    .scrollContainerLeft {
+        width: 100%;
+    }
+
+    .scrollContainerRight {
+        justify-content:normal;
+    }
+
+    .projectOneWrapper,
+    .projectThreeWrapper{
+        @include flex(column-reverse, center, center);
+    }
+
+    .projectTwoWrapper {
+        @include flex(column-reverse, center, center)
+    }
+
+    .projectOneInfo,
+    .projectOneImage,
+    .projectTwoInfo,
+    .projectTwoImage,
+    .projectThreeInfo,
+    .projectThreeImage {
+        width: 90%;
+    }
+}
+
+// CONTACT 
+
+@media #{$lgPhone} {
+
+    .contactContainer {
+
+        h2 {
+
+            &::after {
+                display:none;
+            }
+        }
+    }
+
+    .mainContactContainer {
+        @include flex(column, center, center);
+    }
+    .contactLeftContainer {
+        width: 100%;
+    }
+
+    .contactRightContainer {
+        width: 90%;
+    }
+
+}
+
+

@@ -28,4 +28,14 @@ $accentFont: 'Raleway', sans-serif;
     font-weight: $fontWeight;
 }
 
+$lgDesktop: "only screen and (max-width: 1600px)";
+$medDesktop: "only screen and (max-width: 1440px)";
+$smDesktop: "only screen and (max-width: 1280px)";
+$lgTablet: "only screen and (max-width: 900px)";
+$medTablet: "only screen and (max-width: 800px)";
+$smTablet: "only screen and (max-width: 750px)";
+$lgPhone: "only screen and (max-width: 650px)";
+$medPhone: "only screen and (max-width: 550px)";
+$smPhone: "only screen and (max-width: 400px)"; 
+
 
