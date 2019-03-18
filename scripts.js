@@ -116,6 +116,14 @@ myPortfolio.init = () => {
         });
     });
 
+    $(".bottomHeaderContainer").on("click", function () {
+        const y = $(window).height();
+        window.scrollBy({
+            top: y,
+            behaviour: 'smooth',
+        })
+    })
+
     // let controller = new ScrollMagic.Controller({
     //     container: '.scrollContainer',
     //     globalSceneOptions: {
@@ -259,21 +267,41 @@ myPortfolio.init = () => {
         }
     })
 
-    $(".scrollContainer").on("click", ".desktop", () => {
-        console.log("I am registering")
-        $("object").delay(225).animate({ "width": "100%" });
-        $(".goBack").animate({ "left": "-3rem" })
-    })
+    // $(".scrollContainer").on("click", ".desktop", () => {
+    //     console.log("I am registering")
+    //     $("object").animate({ "width": "100%" });
+    //     $(".goBack").animate({ "left": "-3rem" })
+    // })
 
-    $(".scrollContainer").on('click', ".tablet", () => {
-        $("object").animate({ "width": "50%" });
-        $(".goBack").delay(225).animate({"left" : "20%"})
-    })
+    // $(".scrollContainer").on('click', ".tablet", () => {
+    //     $("object").animate({ "width": "50%" });
+    //     $(".goBack").animate({"left" : "20%"})
+    // })
+
+    // $(".scrollContainer").on("click", ".mobile", () => {
+    //     $("object").animate({ "width": "30%" });
+    //     $(".goBack").animate({ "left": "30%" })
+    // })
+
+    $(".scrollContainer").on("click", ".desktop", () => {
+        $("object").removeClass("addTablet");
+        $("object").removeClass("addMobile")
+        $("object").addClass("addDesktop");
+
+    });
 
     $(".scrollContainer").on("click", ".mobile", () => {
-        $("object").animate({ "width": "30%" });
-        $(".goBack").delay(225).animate({ "left": "30%" })
-    })
+        $("object").removeClass("addTablet");
+        $("object").removeClass("addDesktop")
+        $("object").addClass("addMobile");
+    });
+
+    $(".scrollContainer").on("click", ".tablet", () => {
+        $("object").removeClass("addMobile");
+        $("object").removeClass("addDesktop")
+        $("object").addClass("addTablet");
+    });
+
 
 
     const newScreenWidth = $(window).width();

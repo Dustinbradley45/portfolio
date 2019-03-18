@@ -42,9 +42,12 @@
 }
 
 @media #{$lgPhone} {
+
+    
     .headerLogo {
         width: 46%;
     }
+
 }
 
 @media #{$smPhone} {
@@ -157,8 +160,12 @@
     }
 
     .iconContainer {
-        width: calc(50% - 20px);
+        width: calc(33.3% - 20px);
+        p {
+            display:none;
+        }
     }
+
 }
 
 // PROJECT 
@@ -178,11 +185,21 @@
     }
     .scrollContainerMain{
         flex-direction: column;
+        width: 100%;
 
     }
     .scrollContainerRight,
     .scrollContainerLeft {
         width: 100%;
+
+    }
+
+    .scrollContainerLeft {
+        height: 10%;
+    }
+
+    .projectsContainer {
+        padding: 0 0;
     }
 
     .scrollContainerRight {
@@ -231,6 +248,18 @@
 
     .contactRightContainer {
         width: 90%;
+    }
+
+    .nameContainer {
+        @include flex(column, center, center);
+
+        input {
+            width: 100%;
+        }
+
+        #lastName {
+            margin-left: 0;
+        }
     }
 
 }

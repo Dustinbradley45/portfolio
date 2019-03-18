@@ -348,7 +348,7 @@ header .mainHeaderNav {
 }
 
 header .mainHeaderTitle {
-  height: 65vh;
+  height: 73vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -539,43 +539,70 @@ header .mainHeaderTitle {
 
 .bottomHeaderContainer {
   width: 100%;
-  height: 17vh;
+  height: 8vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   overflow: hidden;
   color: #fffdf6;
+  position: relative;
 }
 
-.bottomHeaderContainer button {
-  background-color: transparent;
-  color: #fffdf6;
-  height: 4rem;
-  border-radius: 12px;
-  border: 2px solid rgba(255, 253, 246, 0.2);
-  padding: .8rem;
-  -webkit-transition: .09s all linear;
-  transition: .09s all linear;
+.bottomHeaderContainer p {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
+  padding: 0;
+  margin: 0;
 }
 
-.bottomHeaderContainer button:hover, .bottomHeaderContainer button:focus {
-  border: 2px solid #fffdf6;
+.bottomHeaderContainer p:after {
+  content: "";
+  width: 2rem;
+  height: 5px;
+  background-color: #65ad91;
+  display: block;
+  -webkit-transform: translateX(50px) translateY(-9px);
+          transform: translateX(50px) translateY(-9px);
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
+  -webkit-transition-delay: .13s;
+          transition-delay: .13s;
+  z-index: -1;
 }
 
-.bottomHeaderContainer .scrollDown {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+.bottomHeaderContainer svg {
+  height: 100%;
+  fill: #fffdf6;
+  fill-opacity: 0.6;
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
+}
+
+.bottomHeaderContainer:hover svg {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  opacity: 1;
+}
+
+.bottomHeaderContainer:hover p {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.bottomHeaderContainer:hover p:after {
+  -webkit-transform: translateX(0) translateY(-9px);
+          transform: translateX(0) translateY(-9px);
 }
 
 @-webkit-keyframes chevronJiggle {
@@ -628,7 +655,7 @@ header .mainHeaderTitle {
   color: white;
   top: 0;
   right: 0;
-  border-left: 1px solid #65ad91;
+  border-left: 6px solid #65ad91;
   background-color: #272727;
   margin: 0 auto;
   text-align: center;
@@ -816,7 +843,7 @@ header .mainHeaderTitle {
 .aboutRightInfo {
   width: 70%;
   text-align: right;
-  height: 80%;
+  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -883,7 +910,7 @@ header .mainHeaderTitle {
 
 .aboutLeftContainer {
   width: 30%;
-  height: 80%;
+  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -915,21 +942,71 @@ header .mainHeaderTitle {
 }
 
 .bottomAboutContainer {
-  margin: 0 auto;
-  height: 20%;
+  width: 100%;
+  height: 8vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  overflow: hidden;
+  color: #fffdf6;
+  position: relative;
+}
+
+.bottomAboutContainer p {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
+  padding: 0;
+  margin: 0;
+}
+
+.bottomAboutContainer p:after {
+  content: "";
+  width: 2rem;
+  height: 5px;
+  background-color: #65ad91;
+  display: block;
+  -webkit-transform: translateX(50px) translateY(-9px);
+          transform: translateX(50px) translateY(-9px);
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
+  -webkit-transition-delay: .13s;
+          transition-delay: .13s;
+  z-index: -1;
+}
+
+.bottomAboutContainer svg {
+  height: 100%;
+  fill: #fffdf6;
+  opacity: 0.6;
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
+}
+
+.bottomAboutContainer:hover svg {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  opacity: 1;
+}
+
+.bottomAboutContainer:hover p {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.bottomAboutContainer:hover p:after {
+  -webkit-transform: translateX(0) translateY(-9px);
+          transform: translateX(0) translateY(-9px);
 }
 
 .educationContainer {
@@ -967,9 +1044,9 @@ header .mainHeaderTitle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 80%;
-  -webkit-transform: translateY(4rem);
-          transform: translateY(4rem);
+  height: 92%;
+  -webkit-transform: translateY(2vh);
+          transform: translateY(2vh);
 }
 
 .educationLeftInfo {
@@ -1062,36 +1139,104 @@ header .mainHeaderTitle {
 }
 
 .bottomEducationContainer {
-  margin: 0 auto;
-  height: 20%;
   width: 100%;
+  height: 8vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  overflow: hidden;
+  color: #fffdf6;
+  position: relative;
+}
+
+.bottomEducationContainer p {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
+  padding: 0;
+  margin: 0;
+}
+
+.bottomEducationContainer p:after {
+  content: "";
+  width: 2rem;
+  height: 5px;
+  background-color: #1d1d1d;
+  display: block;
+  -webkit-transform: translateX(50px) translateY(-9px);
+          transform: translateX(50px) translateY(-9px);
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
+  -webkit-transition-delay: .13s;
+          transition-delay: .13s;
+  z-index: -1;
+}
+
+.bottomEducationContainer svg {
+  height: 100%;
+  fill: #fffdf6;
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
+}
+
+.bottomEducationContainer:hover svg {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.bottomEducationContainer:hover p {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.bottomEducationContainer:hover p:after {
+  -webkit-transform: translateX(0) translateY(-9px);
+          transform: translateX(0) translateY(-9px);
+}
+
+.educationInfoNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.bottomEducationContainer .scrollDown {
-  border: 2px solid rgba(29, 29, 29, 0.5);
-  -webkit-transition: .5 all linear;
-  transition: .5 all linear;
+.educationInfoNav p {
+  color: #272727;
 }
 
-.bottomEducationContainer .scrollDown i {
-  color: #1d1d1d;
-}
-
-.bottomEducationContainer .scrollDown:hover, .bottomEducationContainer .scrollDown:focus {
-  border: 2px solid #1d1d1d;
+.educationInfoNav button {
+  background-color: #fffdf6;
+  border: none;
+  border-radius: 100%;
+  padding: 8px;
+  width: 45px;
+  height: 45px;
+  color: #65ad91;
+  -webkit-transition: .05s all linear;
+  transition: .05s all linear;
+  text-align: center;
+  margin-right: 1rem;
+  font-size: 1rem;
 }
 
 .projectsContainer {
@@ -1112,18 +1257,32 @@ header .mainHeaderTitle {
   height: 2px;
   display: block;
   margin-top: 7px;
-  width: 400px;
+  width: 120%;
   opacity: 0.5;
 }
 
 object {
-  width: 100%;
+  width: 95%;
   height: 80vh;
   border-left: 1rem #65ad91 solid;
   border-right: 1rem #65ad91 solid;
   border-top: 2.5rem #65ad91 solid;
   border-bottom: 2.5rem #65ad91 solid;
   border-radius: 10px;
+  -webkit-transition: .9s all linear;
+  transition: .9s all linear;
+}
+
+.addDesktop {
+  width: 95%;
+}
+
+.addTablet {
+  width: 60%;
+}
+
+.addMobile {
+  width: 40%;
 }
 
 .innerProjectScrollContainer {
@@ -1256,7 +1415,7 @@ object {
 }
 
 .innerProjectScrollContainer {
-  height: 100vh;
+  height: 92vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1264,6 +1423,72 @@ object {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   overflow-x: auto;
+}
+
+.bottomProjectContainer {
+  width: 100%;
+  height: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  overflow: hidden;
+  color: #fffdf6;
+  position: relative;
+}
+
+.bottomProjectContainer p {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
+  padding: 0;
+  margin: 0;
+}
+
+.bottomProjectContainer p:after {
+  content: "";
+  width: 2rem;
+  height: 5px;
+  background-color: #65ad91;
+  display: block;
+  -webkit-transform: translateX(50px) translateY(-9px);
+          transform: translateX(50px) translateY(-9px);
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
+  -webkit-transition-delay: .13s;
+          transition-delay: .13s;
+  z-index: -1;
+}
+
+.bottomProjectContainer svg {
+  height: 100%;
+  fill: #fffdf6;
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
+}
+
+.bottomProjectContainer:hover svg {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.bottomProjectContainer:hover p {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.bottomProjectContainer:hover p:after {
+  -webkit-transform: translateX(0) translateY(-9px);
+          transform: translateX(0) translateY(-9px);
 }
 
 .innerProjectScrollContainer::-webkit-scrollbar {
@@ -1286,6 +1511,7 @@ object {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .scrollContainerMain,
@@ -1367,7 +1593,6 @@ object {
 .projectThreeInfo button {
   border: 2px solid rgba(255, 253, 246, 0.6);
   background-color: transparent;
-  border-radius: 8px;
   color: #fffdf6;
   padding: 5px;
   margin: 3px;
@@ -1382,40 +1607,72 @@ object {
   border: 2px solid #fffdf6;
 }
 
-.projectOneInfo h4,
-.projectTwoInfo h4,
-.projectThreeInfo h4 {
-  border-bottom: 2px solid #65ad91;
+.arrowDown button {
+  background-color: transparent;
+  border: none;
+  overflow: hidden;
+}
+
+.arrowDown button:after {
+  content: "Scroll";
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  color: #65ad91;
+  -webkit-transition: .2s transform linear;
+  transition: .2s transform linear;
+}
+
+.arrowDown button svg {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: .2s transform linear;
+  transition: .2s transform linear;
+}
+
+.arrowDown button:hover svg {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+}
+
+.arrowDown button:hover::after {
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
+  color: #fffdf6;
+}
+
+.arrowDown button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .projectOneInfo,
 .projectThreeInfo {
   padding-right: 1rem;
-}
-
-.projectOneInfo h4,
-.projectThreeInfo h4 {
-  text-align: right;
+  width: 80%;
+  text-align: left;
 }
 
 .projectTwoInfo {
   padding-left: 1rem;
-}
-
-.projectTwoInfo h4 {
+  width: 80%;
   text-align: left;
 }
 
 .projectOneImage,
 .projectTwoImage,
 .projectThreeImage {
-  border-radius: 10px;
   height: 200px;
   overflow: hidden;
   border-left: 0.5rem solid #65ad91;
   border-right: 0.5rem solid #65ad91;
-  border-bottom: 1.5rem solid #65ad91;
-  border-top: 1.5rem solid #65ad91;
+  border-bottom: 1rem solid #65ad91;
+  border-top: 1rem solid #65ad91;
+  margin-top: 2rem;
 }
 
 .projectOneImage img,
@@ -1431,26 +1688,30 @@ object {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
+  padding: 5vh 0 5vh 0;
+  border-top: 2px solid rgba(255, 253, 246, 0.6);
+  border-bottom: 2px solid rgba(255, 253, 246, 0.6);
 }
 
 .projectTwoWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1458,10 +1719,13 @@ object {
       -ms-flex-align: center;
           align-items: center;
   margin: 1rem 0;
+  width: 100%;
+  height: 100%;
+  margin: 5vh 0 5vh 0;
 }
 
 .scrollContainerLeft {
-  width: 50%;
+  width: 40%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1479,8 +1743,8 @@ object {
 }
 
 .scrollContainerRight {
-  width: 50%;
-  height: 100%;
+  width: 60%;
+  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1488,12 +1752,14 @@ object {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: scroll;
+  scroll-behavior: smooth;
 }
 
 .scrollContainerOne {
@@ -1537,6 +1803,41 @@ object {
 .activeProject {
   color: #65ad91;
   background-color: #65ad91;
+}
+
+.projectsInfoNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projectsInfoNav p {
+  color: #fffdf6;
+}
+
+.projectsInfoNav button {
+  background-color: #fffdf6;
+  border: none;
+  border-radius: 100%;
+  padding: 8px;
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
+  color: #65ad91;
+  -webkit-transition: .05s all linear;
+  transition: .05s all linear;
+  text-align: center;
+  margin-right: 1rem;
 }
 
 .contactContainer {
@@ -1860,7 +2161,10 @@ textarea:focus {
     width: 100%;
   }
   .iconContainer {
-    width: calc(50% - 20px);
+    width: calc(33.3% - 20px);
+  }
+  .iconContainer p {
+    display: none;
   }
 }
 
@@ -1881,10 +2185,17 @@ textarea:focus {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
   }
   .scrollContainerRight,
   .scrollContainerLeft {
     width: 100%;
+  }
+  .scrollContainerLeft {
+    height: 10%;
+  }
+  .projectsContainer {
+    padding: 0 0;
   }
   .scrollContainerRight {
     -webkit-box-pack: normal;
@@ -1956,6 +2267,27 @@ textarea:focus {
   }
   .contactRightContainer {
     width: 90%;
+  }
+  .nameContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nameContainer input {
+    width: 100%;
+  }
+  .nameContainer #lastName {
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */

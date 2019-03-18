@@ -16,20 +16,34 @@
              height: 2px;
              display: block;
              margin-top: 7px;
-             width: 400px;
+             width: 120%;
              opacity: 0.5;
          }
      }
 }
 
 object {
-    width:100%;
+    width:95%;
     height:80vh;
     border-left: 1rem $accentColor solid;
     border-right: 1rem $accentColor solid;
     border-top:2.5rem $accentColor solid;
     border-bottom: 2.5rem $accentColor solid;
     border-radius: 10px;
+    transition: .9s all linear;
+}
+
+.addDesktop {
+    width: 95%;
+}
+
+.addTablet {
+    width: 60%;
+}
+
+.addMobile {
+    width: 40%;
+
 }
 
 .innerProjectScrollContainer {
@@ -122,7 +136,7 @@ object {
 }
 
 .innerProjectScrollContainer {
-    height: 100vh;
+    height: 92vh;
     width: 100%;
     // overflow:scroll;
       display: flex;
@@ -130,6 +144,56 @@ object {
       overflow-x: auto;
 
 }
+
+.bottomProjectContainer {
+    width: 100%;
+    height: 8vh;
+    @include flex(row, space-around, flex-end);
+    overflow: hidden;
+    color: $colorLight;
+    position: relative;
+
+    p {
+        transform: translateY(50px);
+        transition: .1s all linear;
+        padding: 0;
+        margin: 0;
+
+        &:after {
+            content: "";
+            width: 2rem;
+            height: 5px;
+            background-color: $accentColor;
+            display: block;
+            transform: translateX(50px) translateY(-9px);
+            transition: .1s all linear;
+            transition-delay: .13s;
+            z-index: -1;
+        }
+    }
+
+    svg {
+        height: 100%;
+        fill: $colorLight;
+        transition: .1s all linear;
+
+    }
+
+}
+
+.bottomProjectContainer:hover svg {
+    transform: translateY(10px);
+
+}
+
+.bottomProjectContainer:hover p {
+    transform: translateY(-10px);
+}
+
+.bottomProjectContainer:hover p:after {
+    transform: translateX(0) translateY(-9px);
+}
+
 
 .innerProjectScrollContainer::-webkit-scrollbar {
     display: none;
@@ -139,6 +203,7 @@ object {
     margin-left: 5%;
     position:relative;
     @include flex(row, center, center);
+    width:100%;
     
 }
 
@@ -149,6 +214,8 @@ width:95%;
 flex: 0 0 auto;
 
 }
+
+
 
 .goBack
 {
@@ -200,7 +267,6 @@ flex: 0 0 auto;
     button {
         border: 2px solid rgba($colorLight, .6);
         background-color:transparent;
-        border-radius: 8px;
         color:$colorLight;
         padding: 5px;
         margin: 3px;
@@ -211,38 +277,87 @@ flex: 0 0 auto;
     }
 
     h4 {
-        border-bottom: 2px solid $accentColor;
+
+        // &:after {
+        //     content: "";
+        //     background-color:$colorLight;
+        //     display:block;
+        //     z-index:-1;
+        //     width: 2rem;
+        //     height: 5px;
+        // }
     }
-  
 }
 
+.arrowDown {
+
+    button {
+        background-color:transparent;
+        border:none;
+        overflow:hidden;
+        
+        &:after {
+            content:"Scroll";
+            transform:translateY(50px);
+            color:$accentColor;
+            transition: .2s transform linear;
+            // transition: .2s color linear;
+       
+            
+        }
+
+        svg {
+            transform:translateY(10px);
+            transition: .2s transform linear;
+        }
+
+    }
+}
+
+.arrowDown button:hover {
+
+    svg {
+        transform:translateY(-50px);
+    }
+
+    &::after {
+        transform:translateY(-25px);
+        color:$colorLight;
+    }
+
+}
+
+.arrowDown button {
+    display: flex;
+    flex-direction: column;
+}
 .projectOneInfo,
 .projectThreeInfo {
     padding-right: 1rem;
-    h4 {
-       text-align: right;
-
-    }
+    width:80%;
+    text-align: left;
 }
 
 .projectTwoInfo {
     padding-left: 1rem;
-      h4 {
-          text-align:left;
-      }
+    width: 80%;
+    text-align:left;
+
 }
+
 
 
 .projectOneImage,
 .projectTwoImage,
 .projectThreeImage {
-    border-radius: 10px;
+
     height: 200px;
     overflow:hidden;
     border-left: 0.5rem solid $accentColor;
     border-right: 0.5rem solid $accentColor;
-    border-bottom: 1.5rem solid $accentColor;
-    border-top:1.5rem solid $accentColor; 
+    border-bottom: 1rem solid $accentColor;
+    border-top:1rem solid $accentColor; 
+    margin-top:2rem;
 
     img {
         width: 100%;
@@ -251,27 +366,45 @@ flex: 0 0 auto;
     }
 }
 
+.projectTwoImage,
+.projectThreeImage {
+
+    img {
+      
+    }
+}
+
 .projectOneWrapper,
 .projectThreeWrapper {
-    @include flex(row, center,center);
+    @include flex(column, center,center);
+    height: 100%;
+    padding:5vh 0 5vh 0;
+    border-top: 2px solid rgba($colorLight,0.6);
+    border-bottom: 2px solid rgba($colorLight, 0.6);
+
 }
 .projectTwoWrapper {
-    @include flex(row-reverse, center,center);
+    @include flex(column, center,center);
     margin: 1rem 0;
+    width: 100%;
+    height:100%;
+    margin: 5vh 0 5vh 0;
 }
 
 
 .scrollContainerLeft {
-    width: 50%;
+    width: 40%;
     height: 100%;
     @include flex(column, center, flex-start);
 
 }
 
 .scrollContainerRight {
-    width: 50%;
-    height: 100%;
-    @include flex(column, space-evenly, center);
+    width: 60%;
+    height: 90%;
+    @include flex(column, flex-start, center);
+    overflow:scroll;
+    scroll-behavior: smooth;
 }
 
 
@@ -306,4 +439,27 @@ flex: 0 0 auto;
 .activeProject {
     color: $accentColor;
     background-color: $accentColor;
+}
+
+.projectsInfoNav {
+     @include flex(row-reverse, flex-start, center);
+
+     p {
+         color: $colorLight;
+     }
+
+    button {
+         background-color: $colorLight;
+         border: none;
+         border-radius: 100%;
+         padding: 8px;
+         width: 45px;
+         height: 45px;
+         margin-left: 10px;
+         color: $accentColor;
+         transition: .05s all linear;
+         text-align: center;
+         margin-right:1rem;
+         
+    }   
 }

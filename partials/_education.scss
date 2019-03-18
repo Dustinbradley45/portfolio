@@ -8,8 +8,8 @@
 
 .innerEducationContainer {
     @include flex(row, center,center);
-    height: 80%;
-    transform:translateY(4rem);
+    height: 92%;
+    transform:translateY(2vh);
 }
 
  .educationLeftInfo {
@@ -75,24 +75,73 @@
     transform:translateY(-20px)
 }
 
-
 .bottomEducationContainer {
-    margin:0 auto;
-    height: 20%;
-    width:100%;
-    @include flex(column, flex-end, center);
+    width: 100%;
+    height: 8vh;
+    @include flex(row, space-around, flex-end);
+    overflow: hidden;
+    color: $colorLight;
+    position: relative;
 
-    .scrollDown {
-        border: 2px solid rgba($primaryColor, .5);
-        transition: .5 all linear;
+    p {
+        transform: translateY(50px);
+        transition: .1s all linear;
+        padding: 0;
+        margin: 0;
 
-        i {
-            color:$primaryColor;
+        &:after {
+            content: "";
+            width: 2rem;
+            height: 5px;
+            background-color: $primaryColor;
+            display: block;
+            transform: translateX(50px) translateY(-9px);
+            transition: .1s all linear;
+            transition-delay: .13s;
+            z-index: -1;
         }
+    }
 
-    &:hover,
-    &:focus {
-        border: 2px solid rgba($primaryColor, 1);
+    svg {
+        height: 100%;
+        fill: $colorLight;
+        transition: .1s all linear;
+
     }
+
+}
+
+.bottomEducationContainer:hover svg {
+    transform: translateY(10px);
+
+}
+
+.bottomEducationContainer:hover p {
+    transform: translateY(-10px);
+}
+
+.bottomEducationContainer:hover p:after {
+    transform: translateX(0) translateY(-9px);
+}
+
+.educationInfoNav {
+    @include flex(row-reverse, flex-start, center);
+     
+    p {
+        color: $secondaryColor;
     }
-}   
+
+        button {
+            background-color: $colorLight;
+            border: none;
+            border-radius: 100%;
+            padding: 8px;
+            width: 45px;
+            height: 45px;
+            color: $accentColor;
+            transition: .05s all linear;
+            text-align: center;
+            margin-right: 1rem;
+            font-size:1rem;
+    }
+}

@@ -4,13 +4,12 @@
     @include flex(row,flex-start,center);
     flex-wrap:wrap;
     overflow:hidden;
-    // transform:translateY(4rem);
 }
 
 .aboutRightInfo {
     width: 70%;
     text-align:right;
-    height: 80%;
+    height: 90%;
     @include flex(column, center,flex-end);
 
     h2 {
@@ -58,7 +57,7 @@
 
 .aboutLeftContainer {
     width: 30%;
-    height: 80%;
+    height: 90%;
     @include flex(row, center,center);
 
     .headshotContainer {
@@ -79,8 +78,52 @@
 }
 
 .bottomAboutContainer {
-    margin:0 auto;
-    height: 20%;
-    @include flex(column, flex-end, center);
+      width:100%;
+      height: 8vh;
+      @include flex(row, space-around, flex-end);
+      overflow:hidden;
+      color:$colorLight;
+      position:relative;
+
+      p {
+          transform: translateY(50px);
+          transition: .1s all linear;
+          padding: 0;
+          margin: 0;
+
+          &:after {
+              content: "";
+              width: 2rem;
+              height: 5px;
+              background-color: $accentColor;
+              display: block;
+              transform: translateX(50px) translateY(-9px);
+              transition: .1s all linear;
+              transition-delay: .13s;
+              z-index: -1;
+          }
+      }
+
+      svg {
+          height: 100%;
+          fill: $colorLight;
+          opacity: 0.6;
+          transition: .1s all linear;
+
+      }
+}
+
+.bottomAboutContainer:hover svg {
+    transform: translateY(10px);
+    opacity:1;
+
+}
+
+.bottomAboutContainer:hover p {
+    transform: translateY(-10px);
+}
+
+.bottomAboutContainer:hover p:after {
+    transform: translateX(0) translateY(-9px);
 }
 
