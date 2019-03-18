@@ -33,6 +33,7 @@ header {
     height: 4rem;
     @include flex(column, center, center);
      background-color:$primaryColor;
+     z-index: 1000;
      border-radius:20px;
      position:fixed;
      right:2rem;

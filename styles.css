@@ -392,6 +392,7 @@ header .mainHeaderTitle {
       -ms-flex-align: center;
           align-items: center;
   background-color: #1d1d1d;
+  z-index: 1000;
   border-radius: 20px;
   position: fixed;
   right: 2rem;
@@ -1735,6 +1736,7 @@ object {
   border-bottom: 1rem solid #65ad91;
   border-top: 1rem solid #65ad91;
   margin-top: 2rem;
+  height: 185px;
 }
 
 .projectOneImage img,
@@ -1743,6 +1745,7 @@ object {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  min-height: 100%;
 }
 
 .projectOneWrapper,
