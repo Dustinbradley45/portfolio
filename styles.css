@@ -2353,4 +2353,10 @@ textarea:focus {
     margin-left: 0;
   }
 }
+
+@media only screen and (max-height: 700px) {
+  .innerProjectScrollContainer {
+    height: auto;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

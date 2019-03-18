@@ -267,7 +267,13 @@
             margin-left: 0;
         }
     }
-
 }
 
+$medTablet: "only screen and (max-width: 800px)";
+
+@media only screen and (max-height: 700px) {
+    .innerProjectScrollContainer {
+        height: auto;
+    }
+}
 
