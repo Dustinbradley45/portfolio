@@ -123,13 +123,18 @@
 
     .aboutLeftContainer {
         width: 90%;
+       
+
+        .headshotContainer {
+
+            img {
+              width: 70%;
+               margin: 0 auto;
+            }
+        }
     }
 
     .aboutInfoNav p{
-        display:none;
-    }
-
-    .scrollDown {
         display:none;
     }
 }
@@ -139,8 +144,8 @@
 @media #{$smTablet} {
 
     .educationContainer {
-        height: auto;
-        padding: 4rem 0;
+        // height: auto;
+        // padding: 4rem 0;
 
     }
     .innerEducationContainer {
@@ -149,6 +154,7 @@
 
     .educationLeftInfo {
         width: 90%;
+        height: 40%;
         text-align:center;
         
         h2::after{
@@ -160,7 +166,7 @@
     }
 
     .iconContainer {
-        width: calc(33.3% - 20px);
+        width: calc(25% - 20px);
         p {
             display:none;
         }

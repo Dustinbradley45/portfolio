@@ -104,25 +104,35 @@ myPortfolio.init = () => {
     myPortfolio.changeLine()
 
     // SCROLL FEATURE
-    $('.scrollDown').on("click", function () {
-        const y = $(window).height();
-        window.scrollBy({
-            top: y,
-            behavior: 'smooth'
-        });
+    // $('.scrollDown').on("click", function () {
+    //     const y = $(window).height();
+    //     window.scrollBy({
+    //         top: y,
+    //         behavior: 'smooth'
+    //     });
 
-        $(this).animate({
-            "opacity": 0
-        });
+    //     $(this).animate({
+    //         "opacity": 0
+    //     });
+    // });
+
+    // $(".bottomHeaderContainer").on("click", function () {
+    //     const y = $(window).height();
+    //     window.scrollBy({
+    //         top: y,
+    //         behaviour: 'smooth',
+    //     })
+    // })
+
+    $('a[href^="#"]').on('click', function (event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 1000);
+        }
     });
-
-    $(".bottomHeaderContainer").on("click", function () {
-        const y = $(window).height();
-        window.scrollBy({
-            top: y,
-            behaviour: 'smooth',
-        })
-    })
 
     // let controller = new ScrollMagic.Controller({
     //     container: '.scrollContainer',
@@ -228,6 +238,10 @@ myPortfolio.init = () => {
                 <button class="mobile responsive" data-val="3"><i class="fas fa-mobile-alt"></i></button>
             </div>         
             <object data="https://dustinbradley45.github.io/dustinBradleyProject2/" type="text/html"></object>
+            <div class="projectLinks">
+                <a href="#">GitHub</a>
+                <a href="#">Live</a>
+            </div>
             `);
 
             $(".scrollContainer").animate({ "width": "95%" })
@@ -245,6 +259,10 @@ myPortfolio.init = () => {
                 <button class="desktop  responsive" data-val="1"><i class="fas fa-desktop"></i></button>
                 <button class="tablet responsive" data-val="2"><i class="fas fa-tablet-alt"></i></button>
                 <button class="mobile responsive" data-val="3"><i class="fas fa-mobile-alt"></i></button>
+            </div>
+            <div class="projectLinks">
+                <a href="#">GitHub</a>
+                <a href="#">Live</a>
             </div>     `);
 
             const screenWidth = $(window).width();
@@ -259,7 +277,11 @@ myPortfolio.init = () => {
                 <button class="desktop  responsive" data-val="1"><i class="fas fa-desktop"></i></button>
                 <button class="tablet responsive" data-val="2"><i class="fas fa-tablet-alt"></i></button>
                 <button class="mobile responsive" data-val="3"><i class="fas fa-mobile-alt"></i></button>
-            </div>     `);
+            </div>
+            <div class="projectLinks">
+                <a href="#">GitHub</a>
+                <a href="#">Live</a>
+            </div>    `);
 
             const screenWidth = $(window).width();
             $(".innerProjectScrollContainer").scrollLeft(screenWidth);
