@@ -237,8 +237,8 @@ myPortfolio.init = () => {
             </div>         
             <object data="https://dustinbradley45.github.io/dustinBradleyProject2/" type="text/html"></object>
             <div class="projectLinks">
-                <a href="#">GitHub</a>
-                <a href="#">Live</a>
+                <a href="https://github.com/Dustinbradley45/dustinBradleyProject2" target="_blank">GitHub</a>
+                <a href="https://dustinbradley45.github.io/dustinBradleyProject2/" target="_blank">Live</a>
             </div>
             `);
 
@@ -259,8 +259,8 @@ myPortfolio.init = () => {
                 <button class="mobile responsive" data-val="3"><i class="fas fa-mobile-alt"></i></button>
             </div>
             <div class="projectLinks">
-                <a href="#">GitHub</a>
-                <a href="#">Live</a>
+                <a href="https://github.com/Dustinbradley45/brokenPhone" target="_blank">GitHub</a>
+                <a href="https://dustinbradley45.github.io/brokenPhone/" target="_blank">Live</a>
             </div>     `);
 
             const screenWidth = $(window).width();
@@ -277,8 +277,8 @@ myPortfolio.init = () => {
                 <button class="mobile responsive" data-val="3"><i class="fas fa-mobile-alt"></i></button>
             </div>
             <div class="projectLinks">
-                <a href="#">GitHub</a>
-                <a href="#">Live</a>
+                <a href="https://github.com/Dustinbradley45/dustinBradleyProject5" target="_blank">GitHub</a>
+                <a href="https://musiclist-c7483.firebaseapp.com/" target="_blank">Live</a>
             </div>    `);
 
             const screenWidth = $(window).width();
