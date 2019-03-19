@@ -117,8 +117,6 @@ myPortfolio.init = () => {
 
     $(window).resize(() => {
         if ($(window).width() < 700) {
-            console.log($(window).width)
-            console.log('hello world');
             $(".buttonContainer").html(
                 ` <div class="mainProjectLinks">
                     <a href="#">GitHub</a>
