@@ -853,7 +853,6 @@ header .mainHeaderTitle {
 
 .aboutRightInfo {
   width: 70%;
-  text-align: right;
   height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -868,6 +867,7 @@ header .mainHeaderTitle {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  text-align: right;
 }
 
 .aboutRightInfo h2:after {
@@ -952,10 +952,6 @@ header .mainHeaderTitle {
   width: 100%;
   -webkit-box-shadow: 8px 8px 0px 1px #65ad91;
           box-shadow: 8px 8px 0px 1px #65ad91;
-}
-
-.back {
-  background-color: red;
 }
 
 .bottomAboutContainer {
@@ -2150,6 +2146,10 @@ textarea:focus {
   }
   .contactLeftContainer {
     padding-bottom: 2rem;
+  }
+  .aboutRightInfo p {
+    line-height: 1.5rem;
+    text-align: left;
   }
 }
 

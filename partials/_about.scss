@@ -8,9 +8,9 @@
 
 .aboutRightInfo {
     width: 70%;
-    text-align:right;
     height: 90%;
     @include flex(column, center,flex-end);
+           text-align:right;
 
     h2 {
     
@@ -29,6 +29,7 @@
         width: 80%;
         font-weight: 300;
         font-size: 1rem;
+ 
     }
 
     .afterMe {
@@ -89,10 +90,6 @@
         }
     }
 
-}
-
-.back {
-    background-color:red;
 }
 
 .bottomAboutContainer {
