@@ -115,15 +115,32 @@ myPortfolio.init = () => {
         }
     });
 
+
+
     $(window).resize(() => {
         if ($(window).width() < 700) {
-            $(".buttonContainer").html(
-                ` <div class="mainProjectLinks">
-                    <a href="#">GitHub</a>
+            $(".projectButtonContainerOne").html(
+                ` <div>
+                    <a href="https://github.com/Dustinbradley45/dustinBradleyProject2">GitHub</a>
+                    <a href="https://dustinbradley45.github.io/dustinBradleyProject2/">Live</a>
+                </div>`
+            );
+            
+            $(".projectButtonContainerTwo").html(
+                ` <div>
+                    <a href="https://github.com/Dustinbradley45/brokenPhone">GitHub</a>
+                    <a href="https://dustinbradley45.github.io/brokenPhone/#">Live</a>
+                </div>`
+            )
+
+            $(".projectButtonContainerThree").html(
+                ` <div>
+                    <a href = "https://github.com/Dustinbradley45/dineWithMe" > GitHub </a>
                     <a href="#">Live</a>
                 </div>`
             )
-            
+
+
         } else $(".buttonContainer").html(
             ` <button class="project1 projectChange" data-id="1">Preview</button>`
         )
@@ -225,7 +242,9 @@ myPortfolio.init = () => {
     
     //  CHANGE PROJECT
     $(".buttonContainer").on("click", ".projectChange", function () {
+       
         if ($(this).data('id') === 1) {
+            console.log("hello world")
             $(".scrollContainer").html(`
              <button class="goBack"><i class="fas fa-chevron-down"></i></button>
              <div class="responsiveIcons">

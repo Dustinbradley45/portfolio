@@ -280,11 +280,11 @@
 
     .projectOneWrapper,
     .projectThreeWrapper{
-        @include flex(column-reverse, center, center);
+        // @include flex(column-reverse, center, center);
     }
 
     .projectTwoWrapper {
-        @include flex(column-reverse, center, center)
+        // @include flex(column-reverse, center, center)
     }
 
     .projectOneInfo,
@@ -406,7 +406,7 @@
         margin-top: 2rem;
 }
 
-@media only screen and (max-height: 780px) {
+@media only screen and (max-height: 850px) {
 header {
     .mainHeaderTitle {
         padding-bottom:7rem;

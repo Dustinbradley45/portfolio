@@ -318,6 +318,10 @@ flex: 0 0 auto;
 }
 
 .arrowDown {
+    width: 20%;
+    margin: 0 auto;
+    @include flex(column, center, center);
+
 
     a {
         background-color:transparent;
@@ -378,14 +382,14 @@ flex: 0 0 auto;
 .projectOneImage,
 .projectTwoImage,
 .projectThreeImage {
-    height: 200px;
+    min-height: 200px;
     overflow:hidden;
     border-left: 0.5rem solid $accentColor;
     border-right: 0.5rem solid $accentColor;
     border-bottom: 1rem solid $accentColor;
     border-top:1rem solid $accentColor; 
     margin-top:2rem;
-    height:185px;
+
 
     img {
         width: 100%;
@@ -397,15 +401,32 @@ flex: 0 0 auto;
 
 .projectOneWrapper,
 .projectThreeWrapper {
-    @include flex(column, center,center);
+    // @include flex(column, center,center);
     height: 100%;
+    width:100%;
     padding:5vh 0 5vh 0;
     border-top: 2px solid rgba($colorLight,0.6);
     border-bottom: 2px solid rgba($colorLight, 0.6);
 
 }
+
+.projectOneImage img,
+.projectTwoImage img,
+.projectThreeImage img {
+    object-fit: cover;
+    max-height: 185px;
+    object-position: top;
+   
+}
+
+.projectOneImage,
+.projectTwoImage,
+.projectThreeImage {
+     margin:0 auto;
+}
+
 .projectTwoWrapper {
-    @include flex(column, center,center);
+    // @include flex(column, center,center);
     margin: 1rem 0;
     width: 100%;
     height:100%;

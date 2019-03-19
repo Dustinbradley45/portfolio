@@ -23,6 +23,8 @@
     height: 100%;
 
 }
+
+
 .contactLeftContainer {
     width: 40%;
 }
@@ -50,3 +52,7 @@
 
 
 // FORM STYLES IN FORM PARTIALS
+
+.nameContainer input::placeholder {
+    color:black;
+}
