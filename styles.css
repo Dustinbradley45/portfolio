@@ -1275,10 +1275,10 @@ header .mainHeaderTitle {
 .projectsContainer h2:after {
   content: " ";
   background-color: white;
-  height: 2px;
+  height: 1px;
   display: block;
   margin-top: 7px;
-  width: 120%;
+  width: 150%;
   opacity: 0.5;
 }
 
@@ -2084,6 +2084,20 @@ textarea:focus {
             transform: translate(-6rem);
     margin-left: 4rem;
   }
+  .iconContainer p {
+    display: none;
+  }
+  .aboutContainer,
+  .innerEducationContainer,
+  .mainContactContainer {
+    margin: 0 4%;
+  }
+  .contactContainer h2:after {
+    width: 65%;
+  }
+  .educationLeftInfo h2:after {
+    width: 150%;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -2091,6 +2105,9 @@ textarea:focus {
     -webkit-transform: translate(-1rem);
             transform: translate(-1rem);
     margin-left: 5.5rem;
+  }
+  .aboutContainer {
+    margin: 0 2rem;
   }
 }
 
@@ -2104,6 +2121,13 @@ textarea:focus {
 @media only screen and (max-width: 650px) {
   .headerLogo {
     width: 46%;
+  }
+  .mainContactContainer {
+    margin: 2rem 0 4rem 0;
+    text-align: center;
+  }
+  .contactLeftContainer {
+    padding-bottom: 2rem;
   }
 }
 
@@ -2156,6 +2180,10 @@ textarea:focus {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     padding: 4rem 0;
     height: auto;
     margin: 0 auto;
@@ -2177,6 +2205,7 @@ textarea:focus {
             align-items: center;
     text-align: center;
     margin: 0 auto;
+    margin-bottom: 2rem;
   }
   .aboutRightInfo h2 {
     margin-top: 2rem;
@@ -2239,9 +2268,6 @@ textarea:focus {
   .iconContainer {
     width: calc(25% - 20px);
   }
-  .iconContainer p {
-    display: none;
-  }
 }
 
 @media only screen and (max-width: 750px) {
@@ -2269,6 +2295,9 @@ textarea:focus {
   }
   .scrollContainerLeft {
     height: 10%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .projectsContainer {
     padding: 0 0;
@@ -2310,12 +2339,24 @@ textarea:focus {
             align-items: center;
   }
   .projectOneInfo,
-  .projectOneImage,
   .projectTwoInfo,
-  .projectTwoImage,
-  .projectThreeInfo,
-  .projectThreeImage {
+  .projectThreeInfo {
     width: 90%;
+  }
+  .projectOneImage,
+  .projectTwoImage,
+  .projectThreeImage {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+  .responsiveIcons {
+    left: 25%;
+  }
+  .bottomAboutContainer,
+  .bottomEducationContainer,
+  .bottomProjectContainer,
+  .bottomHeaderContainer {
+    display: none;
   }
 }
 
@@ -2370,7 +2411,7 @@ textarea:focus {
   }
 }
 
-@media only screen and (max-height: 700px) {
+@media only screen and (max-width: 400px) {
   header .mainHeaderTitle {
     padding-bottom: 7rem;
   }
@@ -2382,6 +2423,52 @@ textarea:focus {
   }
   .aboutContainer {
     padding: 4rem 0 1rem 0;
+  }
+  .mainContactContainer {
+    margin: 2rem 0 4rem 0;
+    text-align: center;
+  }
+  .aboutLeftContainer {
+    margin-bottom: 4rem;
+  }
+  .scrollContainerMain {
+    padding-top: 4rem;
+  }
+  .scrollContainerLeft {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .arrowDown {
+    display: none;
+  }
+  .projectThreeWrapper {
+    margin-bottom: 3rem;
+  }
+  form {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    width: 100%;
+    height: 32rem;
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) and (max-height: 700px) {
+  header .mainHeaderTitle {
+    padding-bottom: 7rem;
+  }
+  header .bottomHeaderContainer {
+    display: none;
+  }
+  .innerProjectScrollContainer {
+    height: auto;
+  }
+  .aboutContainer {
+    padding: 4rem 0 1rem 0;
+  }
+  .aboutLeftContainer {
+    margin-bottom: 4rem;
   }
   .scrollContainerMain {
     padding-top: 4rem;
@@ -2401,7 +2488,7 @@ textarea:focus {
     margin-top: 2rem;
   }
   form {
-    height: 30rem;
+    height: 32rem;
     margin-top: 2rem;
   }
 }

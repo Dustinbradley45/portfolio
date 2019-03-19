@@ -14,6 +14,8 @@
 
 //HEADER 
 
+
+
 @media #{$smDesktop} {
     .headerContainer {
         margin-left: 4rem;
@@ -24,6 +26,38 @@
         transform: translate(-6rem);
         margin-left: 4rem;
     }
+
+
+        .iconContainer {
+            p {
+                display: none;
+            }
+
+        }
+
+        .aboutContainer,
+        .innerEducationContainer,
+        .mainContactContainer {
+            margin: 0 4%;
+        }
+
+        .contactContainer,
+          {
+            h2 {
+                &:after {
+                    width:  65%;
+                }
+            }
+        }
+
+        .educationLeftInfo {
+            h2 {
+                &:after {
+                    width: 150%;
+                }
+            }
+        }
+    
 }
 
 @media #{$lgTablet} {
@@ -31,6 +65,10 @@
     .headerlogo {
         transform: translate(-1rem);
         margin-left: 5.5rem;
+    }
+
+    .aboutContainer {
+        margin: 0 2rem;
     }
 }
 
@@ -47,6 +85,17 @@
     .headerLogo {
         width: 46%;
     }
+
+    .mainContactContainer {
+        margin: 2rem 0 4rem 0;
+        text-align: center;
+    }
+
+    .contactLeftContainer {
+        padding-bottom:2rem;
+    }
+
+   
 
 }
 
@@ -101,6 +150,7 @@
 
     .aboutContainer {
        justify-content:center;
+       flex-direction:column-reverse;
       padding: 4rem 0;
         height: auto;
         margin: 0 auto;
@@ -111,6 +161,8 @@
          @include flex(column, center, center);
            text-align:center;
            margin: 0 auto;
+            margin-bottom: 2rem;
+            
 
         h2 {
             margin-top: 2rem;
@@ -141,6 +193,9 @@
 
 // EDUCATION CONTAINER
 
+
+
+
 @media #{$smTablet} {
 
     .educationContainer {
@@ -168,9 +223,6 @@
 
     .iconContainer {
         width: calc(25% - 20px);
-        p {
-            display:none;
-        }
     }
 
 }
@@ -203,6 +255,7 @@
 
     .scrollContainerLeft {
         height: 10%;
+        align-items:center;
     }
 
     .projectsContainer {
@@ -223,12 +276,27 @@
     }
 
     .projectOneInfo,
-    .projectOneImage,
     .projectTwoInfo,
-    .projectTwoImage,
-    .projectThreeInfo,
-    .projectThreeImage {
+    .projectThreeInfo{
         width: 90%;
+    }
+        
+    .projectOneImage,
+    .projectTwoImage,
+    .projectThreeImage {
+        width:50%;
+        margin-bottom: 1rem;
+    }
+
+    .responsiveIcons {
+        left:25%;
+    }
+
+    .bottomAboutContainer,
+    .bottomEducationContainer,
+    .bottomProjectContainer,
+    .bottomHeaderContainer {
+        display: none;
     }
 }
 
@@ -272,7 +340,59 @@
     }
 }
 
-$medTablet: "only screen and (max-width: 800px)";
+@media #{$smPhone} {
+
+    header {
+        .mainHeaderTitle {
+            padding-bottom: 7rem;
+
+        }
+
+        .bottomHeaderContainer {
+            display: none;
+        }
+
+    }
+
+    .innerProjectScrollContainer {
+        height: auto;
+    }
+
+    .aboutContainer {
+        padding: 4rem 0 1rem 0;
+    }
+
+    .mainContactContainer {
+        margin:2rem 0 4rem 0;
+        text-align:center;
+    }
+
+    .aboutLeftContainer {
+        margin-bottom: 4rem;
+    }
+
+    .scrollContainerMain {
+        padding-top: 4rem;
+    }
+
+    .scrollContainerLeft {
+        align-items: center;
+    }
+
+    .arrowDown {
+        display: none;
+    }
+
+    .projectThreeWrapper {
+        margin-bottom: 3rem;
+    }
+  
+    form {
+        box-shadow:none;
+        width:100%;
+        height: 32rem;
+        margin-top: 2rem;
+}
 
 @media only screen and (max-height: 700px) {
 header {
@@ -292,6 +412,10 @@ header {
 
     .aboutContainer {
         padding: 4rem 0 1rem 0;
+    }
+
+    .aboutLeftContainer {
+        margin-bottom:4rem;
     }
 
     .scrollContainerMain {
@@ -315,9 +439,11 @@ header {
     }
 
     form {
-        height: 30rem;
+        height: 32rem;
         margin-top: 2rem;
     }
+    }
+    
 }
 
 
