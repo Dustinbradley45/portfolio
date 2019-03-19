@@ -882,6 +882,12 @@ header .mainHeaderTitle {
 
 .aboutRightInfo p {
   width: 80%;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.aboutRightInfo .afterMe {
+  position: relative;
 }
 
 .aboutInfoNav {
@@ -1280,6 +1286,22 @@ header .mainHeaderTitle {
   margin-top: 7px;
   width: 150%;
   opacity: 0.5;
+}
+
+.projectIconContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 object {

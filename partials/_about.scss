@@ -27,6 +27,24 @@
 
     p {
         width: 80%;
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
+    .afterMe {
+        position:relative;
+        // &:after {
+        //     content: "";
+        //     display:inline-block;
+        //     height: 5px;
+        //     width: 2rem;
+        //     background-color:$accentColor;
+        //     position: absolute;
+        //     bottom:0;
+        //     right:0;
+        //     z-index: -1;
+        //     transform: translateX(-20px)
+        // }
     }
    
 }

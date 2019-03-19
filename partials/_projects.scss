@@ -22,6 +22,10 @@
      }
 }
 
+.projectIconContainer {
+    @include flex(row, space-between, center);
+}
+
 object {
     width:95%;
     height:80vh;

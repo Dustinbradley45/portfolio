@@ -270,15 +270,16 @@ myPortfolio.init = () => {
         } else if ($(this).data('id') === 3) {
             $(".scrollContainer").html(`
             <button class="goBack"><i class="fas fa-chevron-down"></i></button>
-            <object data="https://musiclist-c7483.firebaseapp.com/" type="text/html"></object>
+            <object data="https://gift-decider.firebaseapp.com/" type="text/html"></object>
              <div class="responsiveIcons">
                 <button class="desktop  responsive" data-val="1"><i class="fas fa-desktop"></i></button>
                 <button class="tablet responsive" data-val="2"><i class="fas fa-tablet-alt"></i></button>
                 <button class="mobile responsive" data-val="3"><i class="fas fa-mobile-alt"></i></button>
             </div>
             <div class="projectLinks">
-                <a href="https://github.com/Dustinbradley45/dustinBradleyProject5" target="_blank">GitHub</a>
-                <a href="https://musiclist-c7483.firebaseapp.com/" target="_blank">Live</a>
+                <a href="https://github.com/Dustinbradley45/dineWithMe" target="_blank">GitHub</a>
+                <a href="https://gift-decider.firebaseapp.com/"
+                target="_blank"> Live </a>
             </div>    `);
 
             const screenWidth = $(window).width();
