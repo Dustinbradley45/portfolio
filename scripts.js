@@ -117,7 +117,7 @@ myPortfolio.init = () => {
 
 
 
-    $(window).resize(() => {
+    // $(window).resize(() => {
         if ($(window).width() < 700) {
             $(".projectButtonContainerOne").html(
                 ` <div>
@@ -145,7 +145,8 @@ myPortfolio.init = () => {
             ` <button class="project1 projectChange" data-id="1">Preview</button>`
         )
 
-    })
+}
+    // )
 
     // let controller = new ScrollMagic.Controller({
     //     container: '.scrollContainer',
