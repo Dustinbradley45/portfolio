@@ -228,6 +228,15 @@ h6 {
   margin: 0;
 }
 
+h4 {
+  letter-spacing: 1.4px;
+  padding-bottom: 5px;
+}
+
+h6 {
+  letter-spacing: 1.1px;
+}
+
 p {
   font-size: 1rem;
   line-height: 1.7rem;
@@ -369,6 +378,8 @@ header .mainHeaderTitle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
 }
 
 .headerLogo {
@@ -1658,6 +1669,7 @@ object {
 .projectTwoInfo,
 .projectThreeInfo {
   padding: 5px;
+  margin-top: 1rem;
 }
 
 .projectOneInfo p,
@@ -2368,7 +2380,7 @@ textarea:focus {
   .projectTwoImage,
   .projectThreeImage {
     width: 50%;
-    margin-bottom: 1rem;
+    margin: 1rem auto;
   }
   .responsiveIcons {
     left: 25%;
@@ -2429,6 +2441,14 @@ textarea:focus {
   }
   .nameContainer #lastName {
     margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .projectOneImage,
+  .projectTwoImage,
+  .projectThreeImage {
+    width: 80%;
   }
 }
 

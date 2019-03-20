@@ -287,7 +287,7 @@ myPortfolio.init = () => {
         } else if ($(this).data('id') === 3) {
             $(".scrollContainer").html(`
             <button class="goBack"><i class="fas fa-chevron-down"></i></button>
-            <object data="https://gift-decider.firebaseapp.com/" type="text/html"></object>
+            <object data="https://restdecider2.firebaseapp.com/" type="text/html"></object>
              <div class="responsiveIcons">
                 <button class="desktop  responsive" data-val="1"><i class="fas fa-desktop"></i></button>
                 <button class="tablet responsive" data-val="2"><i class="fas fa-tablet-alt"></i></button>
@@ -295,7 +295,7 @@ myPortfolio.init = () => {
             </div>
             <div class="projectLinks">
                 <a href="https://github.com/Dustinbradley45/dineWithMe" target="_blank">GitHub</a>
-                <a href="https://gift-decider.firebaseapp.com/"
+                <a href="https://restdecider2.firebaseapp.com/"
                 target="_blank"> Live </a>
             </div>    `);
 
@@ -304,22 +304,6 @@ myPortfolio.init = () => {
 
         }
     })
-
-    // $(".scrollContainer").on("click", ".desktop", () => {
-    //     console.log("I am registering")
-    //     $("object").animate({ "width": "100%" });
-    //     $(".goBack").animate({ "left": "-3rem" })
-    // })
-
-    // $(".scrollContainer").on('click', ".tablet", () => {
-    //     $("object").animate({ "width": "50%" });
-    //     $(".goBack").animate({"left" : "20%"})
-    // })
-
-    // $(".scrollContainer").on("click", ".mobile", () => {
-    //     $("object").animate({ "width": "30%" });
-    //     $(".goBack").animate({ "left": "30%" })
-    // })
 
     $(".scrollContainer").on("click", ".desktop", () => {
         $("object").removeClass("addTablet");

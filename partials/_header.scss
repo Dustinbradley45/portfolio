@@ -12,7 +12,9 @@ header {
         height: 73vh;
         position:relative;
         @include flex(row, flex-start, center);
-        // transform:translateY(3rem);
+        transform:translateY(-10%);
+
+       
     }
 }
 
@@ -100,6 +102,17 @@ header {
     width: 70%;
     @include flex(column, center, flex-start);
     height:100%;
+
+    //  &:after {
+    //      content: "";
+    //      height: 2px;
+    //      width: 50px;
+    //      position: absolute;
+    //      display: block;
+    //      background-color: $accentColor;
+    //      transform: translate3d(42px, -62px, -135px) translateZ(100px) rotateZ(90deg);
+
+    //  }
 
     h1 {
         color:$colorLight;

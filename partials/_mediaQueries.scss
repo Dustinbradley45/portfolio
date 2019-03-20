@@ -297,7 +297,8 @@
     .projectTwoImage,
     .projectThreeImage {
         width:50%;
-        margin-bottom: 1rem;
+        margin:1rem auto;
+
     }
 
     .responsiveIcons {
@@ -313,6 +314,7 @@
 }
 
 // CONTACT 
+
 
 @media #{$lgPhone} {
 
@@ -349,6 +351,16 @@
         #lastName {
             margin-left: 0;
         }
+    }
+}
+
+
+@media #{$medPhone} {
+
+    .projectOneImage,
+    .projectTwoImage,
+    .projectThreeImage {
+        width: 80%;
     }
 }
 
